@@ -18,55 +18,39 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+        <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 sticky-top" style=" background-color: #3E6D81 !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="index.php">
+                    <img src="/assets/img/logo-light.png" width="60%" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight: 600;">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="index.php">Home&emsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="question_collection.php">Question Collection&emsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="generate.php">Generate&emsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="cbt.php">CBT&emsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="login.php">Sign In&emsp;</a>
+                        </li>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <a class='dropdown-item' href='/'>
+                                Masuk
+                            </a>
+                            <a class='dropdown-item' href='/'>
+                                Profile
+                            </a>
+                        </div>
                     </ul>
                 </div>
             </div>
