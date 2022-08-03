@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
 
 
 Auth::routes();
@@ -31,4 +29,10 @@ Route::get('/cbt/start-test', [App\Http\Controllers\Cbt::class, 'startTest'])->n
 Route::get('/cbt/test-landing-page', [App\Http\Controllers\Cbt::class, 'testLandingPage'])->name('home');
 
 Route::get('/cbt/test-result', [App\Http\Controllers\Cbt::class, 'testResult'])->name('home');
+
+Route::get('/generate', [App\Http\Controllers\QuestionController::class, 'index'])->name('home');
+
+Route::get('/generate/question-type', [App\Http\Controllers\QuestionController::class, 'generate'])->name('home');
+
+Route::get('/question-collection', [App\Http\Controllers\QuestionController::class, 'question_collection'])->name('home');
 
