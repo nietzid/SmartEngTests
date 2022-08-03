@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 fixed-top" style=" background-color: #3E6D81 !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
         <div class="container-fluid ">
             <a class="navbar-brand" href="index.php">
-                <img src="static/plugins/images/assets/img/logo-light.png" width="60%" alt="">
+                <img src="/assets/img/logo-light.png" width="60%" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,10 +68,10 @@
         </div>
         <div class="row text-center">
             <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <a href="generate_question" style="color: #3E6D81; text-decoration: none;">
+                <a href="question-type" style="color: #3E6D81; text-decoration: none;">
                     <div class="card">
                         <div class="card-body">
-                            <img src="static/plugins/images/assets/img/error_identification.png" alt="">
+                            <img src="/assets/img/error_identification.png" alt="">
                             <br><br>
                             <b>
                                 Error Identification
@@ -81,10 +81,10 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <a href="generate_question" style="color: #3E6D81; text-decoration: none;">
+                <a href="question-type" style="color: #3E6D81; text-decoration: none;">
                     <div class="card">
                         <div class="card-body">
-                            <img src="static/plugins/images/assets/img/sentence_completion.png" alt="">
+                            <img src="/assets/img/sentence_completion.png" alt="">
                             <br><br>
                             <b>
                                 Sentence Completion
@@ -94,10 +94,10 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <a href="generate_question" style="color: #3E6D81; text-decoration: none;">
+                <a href="question-type" style="color: #3E6D81; text-decoration: none;">
                     <div class="card">
                         <div class="card-body">
-                            <img src="static/plugins/images/assets/img/vocabulary.png" alt="">
+                            <img src="/assets/img/vocabulary.png" alt="">
                             <br><br>
                             <b>
                                 Vocabulary
