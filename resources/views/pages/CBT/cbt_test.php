@@ -1,7 +1,3 @@
-<?php
-require 'conn.php';
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -35,98 +31,62 @@ require 'conn.php';
     <div class="p-5 pb-3 font-poppins">
         <p id="demo" class="mt-4" style="color: #3e6d81; font-size: 20px; font-weight: 600; text-align: right;"></p>
         <div class="row mb-4 mt-2 gap-4">
-            <?php
-            $data_soal = mysqli_query($conn, "select * from test");
-            $nomor = 1;
-            $batas = 1;
-            $halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
-            $halaman_awal = ($halaman > 1) ? ($halaman * $batas) - $batas : 0;
-
-            $previous = $halaman - 1;
-            $next = $halaman + 1;
-
-            $data = mysqli_query($conn, "select * from test");
-            $jumlah_data = mysqli_num_rows($data);
-            $total_halaman = ceil($jumlah_data / $batas);
-
-            $data_soal = mysqli_query($conn, "select * from test limit $halaman_awal, $batas");
-            $nomor = $halaman_awal + 1;
-            while ($soal = mysqli_fetch_array($data_soal)) { ?>
-                <div class="col-lg-9 col-md-9 col-12 p-4" style="text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Cumque repellendus consequatur eveniet
-                        laborum. Rerum in perferendis labore officiis
-                        reprehenderit officia quas dolore minus, saepe
-                        repudiandae laudantium aliquam temporibus, inventore
-                        maxime? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Cumque repellendus consequatur
-                        eveniet laborum. Rerum in perferendis labore
-                        officiis reprehenderit officia quas dolore minus,
-                        saepe repudiandae laudantium aliquam temporibus,
-                        inventore maxime? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Cumque repellendus
-                        consequatur eveniet laborum. Rerum in perferendis
-                        labore officiis reprehenderit officia quas dolore
-                        minus, saepe repudiandae laudantium aliquam
-                        temporibus, inventore maxime? Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit. Cumque
-                        repellendus consequatur eveniet laborum. Rerum in
-                        perferendis labore officiis reprehenderit officia
-                        quas dolore minus, saepe repudiandae laudantium
-                        aliquam temporibus, inventore maxime?
-                    </p>
-                    <?php echo $soal['question']; ?>
-                    <!-- <p>
-                        1. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Perspiciatis laudantium numquam
-                        maiores nisi aut? Molestias rem, at ratione esse
-                        eius aliquid voluptatem animi. Totam tempore amet
-                        rerum fugit, sapiente rem.
-                    </p> -->
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="option" value="A" />
-                        <label class="form-check-label">
-                            <?php echo $soal['option_A']; ?>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="option" value="B" />
-                        <label class="form-check-label">
-                            <?php echo $soal['option_B']; ?>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="option" value="C" />
-                        <label class="form-check-label">
-                            <?php echo $soal['option_C']; ?>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="option" value="D" />
-                        <label class="form-check-label">
-                            <?php echo $soal['option_D']; ?>
-                        </label>
-                    </div>
-                    <div class="row mt-3" style="float: right">
-                        <a <?php if ($halaman < $total_halaman) {
-                                echo "href='?halaman=$next'";
-                            } ?>>
-                            <button class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
-                                Next
-                            </button>
-                        </a>
-                    </div>
+            <div class="col-lg-9 col-md-9 col-12 p-4" style="text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Cumque repellendus consequatur eveniet
+                    laborum. Rerum in perferendis labore officiis
+                    reprehenderit officia quas dolore minus, saepe
+                    repudiandae laudantium aliquam temporibus, inventore
+                    maxime? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Cumque repellendus consequatur
+                    eveniet laborum. Rerum in perferendis labore
+                    officiis reprehenderit officia quas dolore minus,
+                    saepe repudiandae laudantium aliquam temporibus,
+                    inventore maxime? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Cumque repellendus
+                    consequatur eveniet laborum. Rerum in perferendis
+                    labore officiis reprehenderit officia quas dolore
+                    minus, saepe repudiandae laudantium aliquam
+                    temporibus, inventore maxime? Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Cumque
+                    repellendus consequatur eveniet laborum. Rerum in
+                    perferendis labore officiis reprehenderit officia
+                    quas dolore minus, saepe repudiandae laudantium
+                    aliquam temporibus, inventore maxime?
+                </p>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="A" />
+                    <label class="form-check-label">
+                    </label>
                 </div>
-            <?php } ?>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="B" />
+                    <label class="form-check-label">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="C" />
+                    <label class="form-check-label">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="D" />
+                    <label class="form-check-label">
+                    </label>
+                </div>
+                <div class="row mt-3" style="float: right">
+                    <a href="<?= url('cbt/test-result'); ?>">
+                        <button class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
+                            Next
+                        </button>
+                    </a>
+                </div>
+            </div>
             <div class="col-lg col-md col p-4" style="background-color: white;text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
-                <div class="row row-cols-5 gap-3" style="text-align: center;">
-                    <?php for ($x = 1; $x <= $total_halaman; $x++) { ?>
-                        <a style="background-color: lightgray;" class="page-link" href="?halaman=<?php echo $x ?>">
-                            <?php echo $x; ?>
-                        </a>
-                    <?php } ?>
-                </div>
+                <!-- <div class="row row-cols-5 gap-3" style="text-align: center;">
+                    <a style="background-color: lightgray;" class="page-link">
+                </div> -->
             </div>
         </div>
     </div>

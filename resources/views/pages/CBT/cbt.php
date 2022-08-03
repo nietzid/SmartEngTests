@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 fixed-top" style=" background-color: #3E6D81 !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
         <div class="container-fluid ">
             <a class="navbar-brand" href="index.php">
-                <img src="static/plugins/images/assets/img/logo-light.png" width="60%" alt="">
+                <img src="assets/img/logo-light.png" width="60%" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
                 Computer Based Test
             </h2>
 
-            <img class="mx-auto d-block" width="15%" src="static/plugins/images/assets/img/pronoun_reference.png" alt="">
+            <img class="mx-auto d-block" width="15%" src="assets/img/pronoun_reference.png" alt="">
 
             <p class="text-center mt-4" style="color: white">
                 Turn your question collection into Computer Based Test with a few simple and easy step immediately. <br> Students can instantly join the test with the link and password you provide.
@@ -66,14 +66,14 @@
             <div class="row mt-4">
                 <div class="col-4"></div>
                 <div class="col-2 text-center">
-                    <a href="cbt_createtest.php">
+                    <a href="<?= url('cbt/create-test'); ?>">
                         <button type="button" class="btn ps-5 pe-5 text-light" style="background-color: #5E7B87;">
                             Create Test
                         </button>
                     </a>
                 </div>
                 <div class="col-2 text-center">
-                    <a href="test_landingpage.php">
+                    <a href="<?= url('cbt/start-test'); ?>">
                         <button type="button" class="btn ps-5 pe-5 text-light" style="background-color: #5E7B87;">
                             Start Test
                         </button>

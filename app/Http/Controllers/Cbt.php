@@ -18,16 +18,16 @@ class Cbt extends Controller
 
     public function startTest()
     {
-        return view('pages/CBT/cbt_starttest');
+        return view('pages/CBT/cbt_test');
     }
 
     public function testLandingPage()
     {
-        return view('pages/CBT/cbt_testlandingpage');
+        return view('pages/CBT/testlandingpage');
     }
 
     public function testResult()
     {
-        return view('pages/CBT/cbt_testresult');
+        return view('pages/CBT/test_result');
     }
 }
