@@ -97,7 +97,7 @@
             </div>
 
             <div class="mb-5 mt-2">
-                <a href="add_question.php">
+                <a href="add-question">
                     <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; width: 100%">Next</button>
                 </a>
             </div>

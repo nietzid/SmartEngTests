@@ -18,6 +18,6 @@ class QuestionController extends Controller
 
     public function question_collection()
     {
-        return view('pages/generate/question_collection');
+        return view('pages/Generate/question_collection');
     }
 }

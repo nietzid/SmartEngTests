@@ -30,4 +30,9 @@ class Cbt extends Controller
     {
         return view('pages/CBT/test_result');
     }
+
+    public function addQuestion()
+    {
+        return view('pages/CBT/add_question');
+    }
 }
