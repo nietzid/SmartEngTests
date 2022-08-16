@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container p-4 pt-5 mt-5">
+<div class="container p-4 pt-5">
     <div style="color: #CA6035;" class="mb-4 text-center">
-        <h3>
+        <h3>    
             <b>
                 Create Test
             </b>
@@ -12,14 +12,19 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, exercitationem consequatur.
         </p>
     </div>
-    <form method="post" action="">
+    <form method="post" action="{{url('store-create-test')}}">
+        @csrf
         <div class="mb-3">
             <label for="title" class="form-label" style="color: #3E6D81; font-weight: bold;">Title Test</label>
             <input type="text" name="title" class="form-control" id="title" placeholder="Input Title">
         </div>
         <div class="mb-3">
-            <label for="tipe" class="form-label" style="color: #3E6D81; font-weight: bold;">Tipe Question</label>
-            <input type="text" name="tipe" class="form-control" id="tipe" placeholder="Tipe Question">
+            <label for="tipe" class="form-label" style="color: #3E6D81; font-weight: bold;">Description</label>
+            <input type="text" name="description" class="form-control" id="tipe" placeholder="Description">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label" style="color: #3E6D81; font-weight: bold;">Date</label>
+            <input type="date" name="date" class="form-control" id="start">
         </div>
         <div class="mb-3">
             <label for="start" class="form-label" style="color: #3E6D81; font-weight: bold;">Start Test</label>
@@ -39,9 +44,7 @@
         </div>
 
         <div class="mb-5 mt-2">
-            <a href="add-question">
-                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; width: 100%">Next</button>
-            </a>
+            <button type="submit" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; width: 100%">Next</button>
         </div>
     </form>
 </div>

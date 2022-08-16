@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('test_collections', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->string("description")->nullable();
+            $table->string("description");
             $table->date('date');
             $table->time('start_time', $precision = 0);
             $table->time('end_time', $precision = 0);
+            $table->timestamps();
         });
     }
 
