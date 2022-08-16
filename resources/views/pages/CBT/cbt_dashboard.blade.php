@@ -23,19 +23,23 @@
         </div>
     </div>
     <div class="row m-5">
-        <!-- mulai loop disini -->
+        @foreach ($tests as $test)            
         <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
             <div class="card p-2">
                 <div class="card-body">
-                    English Test
+                    {{$test->title}}
                     <hr class="p-3 pt-0">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus cum nostrum similique numquam fugit rem.
+                        {{$test->description}}
+                        <br>
+                        {{$test->date}} 
+                        <br>
+                        {{$test->start_time}} - {{$test->end_time}}
                     </p>
                 </div>
             </div>
         </div>
-        <!-- end loop disini -->
+        @endforeach
     </div>
 </div>
 @endsection

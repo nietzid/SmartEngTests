@@ -16,31 +16,31 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label" style="color: #3E6D81; font-weight: bold;">Title Test</label>
-            <input type="text" name="title" class="form-control" id="title" placeholder="Input Title">
+            <input required type="text" name="title" class="form-control" id="title" placeholder="Input Title">
         </div>
         <div class="mb-3">
             <label for="tipe" class="form-label" style="color: #3E6D81; font-weight: bold;">Description</label>
-            <input type="text" name="description" class="form-control" id="tipe" placeholder="Description">
+            <input required type="text" name="description" class="form-control" id="tipe" placeholder="Description" maxlength="100">
         </div>
         <div class="mb-3">
             <label for="date" class="form-label" style="color: #3E6D81; font-weight: bold;">Date</label>
-            <input type="date" name="date" class="form-control" id="start">
+            <input required type="date" name="date" class="form-control" id="start">
         </div>
         <div class="mb-3">
             <label for="start" class="form-label" style="color: #3E6D81; font-weight: bold;">Start Test</label>
-            <input type="time" name="start" class="form-control" id="start">
+            <input required type="time" name="start" class="form-control" id="start">
         </div>
         <div class="mb-3">
             <label for="end" class="form-label" style="color: #3E6D81; font-weight: bold;">End Test</label>
-            <input type="time" name="end" class="form-control" id="end">
+            <input required type="time" name="end" class="form-control" id="end">
         </div>
         <div class="mb-3">
             <label for="code" class="form-label" style="color: #3E6D81; font-weight: bold;">Code Test</label>
-            <input type="text" name="code" class="form-control" id="code" placeholder="Test Code">
+            <input required type="text" name="code" class="form-control" id="code" placeholder="Test Code">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label" style="color: #3E6D81; font-weight: bold;">Password Test</label>
-            <input type="text" name="password" class="form-control" id="password" placeholder="Password Test">
+            <input required type="text" name="password" class="form-control" id="password" placeholder="Password Test">
         </div>
 
         <div class="mb-5 mt-2">
