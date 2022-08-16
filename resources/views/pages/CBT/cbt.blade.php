@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid mt-5 pt-5" style="background-color: #3E6D81;">
+<div class="container-fluid pt-5" style="background-color: #3E6D81; height: 100vh">
     <h2 class="mt-3 mb-5 text-center" style="color: white; font-weight:800">
         Computer Based Test
     </h2>
@@ -15,9 +15,9 @@
     <div class="row mt-4">
         <div class="col-4"></div>
         <div class="col-2 text-center">
-            <a href="<?= url('cbt/create-test'); ?>">
+            <a href="<?= url('cbt/cbt-dashboard'); ?>">
                 <button type="button" class="btn ps-5 pe-5 text-light" style="background-color: #5E7B87;">
-                    Create Test
+                    Test Dashboard
                 </button>
             </a>
         </div>

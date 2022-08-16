@@ -32,6 +32,8 @@ Route::get('/cbt/test-landing-page', [App\Http\Controllers\Cbt::class, 'testLand
 
 Route::get('/cbt/add-question', [App\Http\Controllers\Cbt::class, 'addQuestion'])->name('home');
 
+Route::get('/cbt/cbt-dashboard', [App\Http\Controllers\Cbt::class, 'cbtDashboard'])->name('home');
+
 Route::get('/cbt/test-result', [App\Http\Controllers\Cbt::class, 'testResult'])->name('home');
 
 Route::get('/generate', [App\Http\Controllers\QuestionController::class, 'index'])->name('home');

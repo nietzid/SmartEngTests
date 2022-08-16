@@ -37,7 +37,12 @@ class Cbt extends Controller
         return view('pages/CBT/add_question');
     }
 
-    public function storeNewTest( Request $request )
+    public function cbtDashboard()
+    {
+        return view('pages/CBT/cbt_dashboard');
+    }
+
+    public function storeNewTest(Request $request)
     {
         $testCollection = new TestCollection;
         $testCollection->title = $request->title;
