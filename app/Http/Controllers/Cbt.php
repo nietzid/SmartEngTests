@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TestCollection;
 use Illuminate\Http\Request;
 
 class Cbt extends Controller
@@ -23,7 +24,7 @@ class Cbt extends Controller
 
     public function testLandingPage()
     {
-        return view('pages/CBT/testlandingpage');
+        return view('pages/CBT/test_landingpage');
     }
 
     public function testResult()
@@ -34,5 +35,17 @@ class Cbt extends Controller
     public function addQuestion()
     {
         return view('pages/CBT/add_question');
+    }
+
+    public function storeNewTest( Request $request )
+    {
+        $testCollection = new TestCollection;
+        $testCollection->title = $request->title;
+        $testCollection->description = $request->description;
+        $testCollection->date = $request->date;
+        $testCollection->start_time = $request->start;
+        $testCollection->end_time = $request->end;
+        $testCollection->save();
+        return view('pages/CBT/cbt_createtest');
     }
 }

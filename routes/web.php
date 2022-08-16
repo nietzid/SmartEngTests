@@ -39,3 +39,5 @@ Route::get('/generate', [App\Http\Controllers\QuestionController::class, 'index'
 Route::get('/generate/question-type', [App\Http\Controllers\QuestionController::class, 'generate'])->name('home');
 
 Route::get('/question-collection', [App\Http\Controllers\QuestionController::class, 'question_collection'])->name('home');
+
+Route::post('/store-create-test', [App\Http\Controllers\Cbt::class, 'storeNewTest'])->name('home');
