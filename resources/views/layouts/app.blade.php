@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
 
     <style>
         .flex {
@@ -21,10 +22,11 @@
             margin: 0 auto;
         }
     </style>
-    
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 sticky-top" style=" background-color: #3E6D81 !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
@@ -38,19 +40,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight: 600;">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white !important;" aria-current="page" href="index.php">Home&emsp;</a>
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="<?= url(''); ?>">Home&emsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white !important;" aria-current="page" href="question_collection.php">Question Collection&emsp;</a>
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="<?= url('question-collection'); ?>">Question Collection&emsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white !important;" aria-current="page" href="generate.php">Generate&emsp;</a>
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="<?= url('generate'); ?>">Generate&emsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white !important;" aria-current="page" href="cbt.php">CBT&emsp;</a>
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="<?= url('cbt'); ?>">CBT&emsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white !important;" aria-current="page" href="login.php">Sign In&emsp;</a>
+                            <a class="nav-link" style="color: white !important;" aria-current="page" href="<?= url('login'); ?>">Sign In&emsp;</a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <a class='dropdown-item' href='/'>
@@ -65,9 +67,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
 </body>
+
 </html>
