@@ -91,7 +91,9 @@
                     <p>
                         Get the most out of SmartEngTest now!
                     </p>
-                    <button class="btn mt-2" style="background-color: #3E6D81; color: white; width: 30%">Upgrade Account</button>
+                    <a href="<?= url('userpages/upgrade-account') ?>">
+                        <button class="btn mt-2" style="background-color: #3E6D81; color: white; width: 30%">Upgrade Account</button>
+                    </a>
                 </div>
                 <div class="col flex">
                     <img src="assets/img/saly-1.png" width="50%" alt="">

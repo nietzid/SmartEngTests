@@ -50,4 +50,6 @@ Route::get('/cbt/test-detail', [App\Http\Controllers\Cbt::class, 'cbtDetail'])->
 
 Route::get('/cbt/test-page', [App\Http\Controllers\Cbt::class, 'cbtLandingPage'])->name('home');
 
+Route::get('/userpages/upgrade-account', [App\Http\Controllers\UpgradeAccountController::class, 'index'])->name('home');
+
 Route::post('/store-create-test', [App\Http\Controllers\Cbt::class, 'storeNewTest'])->name('home');
