@@ -23,14 +23,15 @@
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Summary
+                        <b>
+                            Summary
+                        </b>
                     </button>
                 </h2>
                 @foreach ($questions as $question)
                 @if ($question->category == 'Summary')
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
-                    <hr class="ms-4 me-4">
                 </div>
                 @endif
                 @endforeach
@@ -39,62 +40,66 @@
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Short Answer Question
+                        <b>
+                            Short Answer Question
+                        </b>
                     </button>
                 </h2>
                 @foreach ($questions as $question)
                 @if ($question->category == 'Short Answer Question')
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
-                    <hr class="ms-4 me-4">
                 </div>
                 @endif
                 @endforeach
             </div>
 
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Fill in The Blank
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <b>
+                            Fill in The Blank
+                        </b>
                     </button>
                 </h2>
                 @foreach ($questions as $question)
                 @if ($question->category == 'Fill in The Blank')
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
-                    <hr class="ms-4 me-4">
                 </div>
                 @endif
                 @endforeach
             </div>
 
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        True or False
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <b>
+                            True or False
+                        </b>
                     </button>
                 </h2>
                 @foreach ($questions as $question)
                 @if ($question->category == 'True or False')
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
-                    <hr class="ms-4 me-4">
                 </div>
                 @endif
                 @endforeach
             </div>
 
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Multiple Choice
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <b>
+                            Multiple Choice
+                        </b>
                     </button>
                 </h2>
                 @foreach ($questions as $question)
                 @if ($question->category == 'Multiple Choice')
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
-                    <hr class="ms-4 me-4">
                 </div>
                 @endif
                 @endforeach

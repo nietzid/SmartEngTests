@@ -21,7 +21,7 @@
         </div>
 
         <div class="mb-2 mt-2">
-            <a href="detail_test.php">
+            <a href="<?= url('cbt/test-detail'); ?>">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Check Detail Test</button>
             </a>
         </div>

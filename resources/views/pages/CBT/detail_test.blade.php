@@ -41,7 +41,7 @@
         </table>
 
         <div class="mb-2 mt-2">
-            <a href="cbt_test.php">
+            <a href="<?= url('cbt/start-test'); ?>">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Do Test</button>
             </a>
         </div>

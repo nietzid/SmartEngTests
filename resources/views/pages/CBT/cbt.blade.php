@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="col-2 text-center">
-            <a href="<?= url('cbt/start-test'); ?>">
+            <a href="<?= url('cbt/test-page'); ?>">
                 <button type="button" class="btn ps-5 pe-5 text-light" style="background-color: #5E7B87;">
                     Start Test
                 </button>

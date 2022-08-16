@@ -40,7 +40,19 @@ class Cbt extends Controller
     public function cbtDashboard()
     {
         $tests = TestCollection::all();
-        return view('pages/CBT/cbt_dashboard',['tests'=>$tests]);
+        return view('pages/CBT/cbt_dashboard', ['tests' => $tests]);
+    }
+
+    public function cbtLandingPage()
+    {
+        $tests = TestCollection::all();
+        return view('pages/CBT/test_landingpage', ['tests' => $tests]);
+    }
+
+    public function cbtDetail()
+    {
+        $tests = TestCollection::all();
+        return view('pages/CBT/detail_test', ['tests' => $tests]);
     }
 
     public function storeNewTest(Request $request)

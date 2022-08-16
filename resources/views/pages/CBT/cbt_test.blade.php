@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="p-5 pb-3 font-poppins">
-    <p id="demo" class="mt-4" style="color: #3e6d81; font-size: 20px; font-weight: 600; text-align: right;"></p>
+    <p id="demo" style="color: #3e6d81; font-size: 20px; font-weight: 600; text-align: right;"></p>
     <div class="row mb-4 mt-2 gap-4">
         <div class="col-lg-9 col-md-9 col-12 p-4" style="text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
             <p>
@@ -60,6 +60,16 @@
             <!-- <div class="row row-cols-5 gap-3" style="text-align: center;">
                 <a style="background-color: lightgray;" class="page-link">
             </div> -->
+            <?php
+            $total_halaman = 10;
+            ?>
+            <div class="row row-cols-5 gap-3" style="text-align: center;">
+                <?php for ($x = 1; $x <= $total_halaman; $x++) { ?>
+                    <a style="background-color: lightgray;" class="page-link" href="?halaman=<?php echo $x ?>">
+                        <?php echo $x; ?>
+                    </a>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>

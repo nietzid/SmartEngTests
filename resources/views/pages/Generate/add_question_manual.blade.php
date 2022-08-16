@@ -14,12 +14,6 @@
                 <label for="Passage">Passage</label>
                 <textarea class="form-control mb-3" type="text" name="passage_id" id="passage_id" rows="7"></textarea>
 
-                <!-- <label for="Question">Question</label>
-                <input class="form-control mb-3" type="text" name="question" id="question">
-
-                <label for="Answer">Answer</label>
-                <input class="form-control mb-3" type="text" name="answer" id="answer"> -->
-
                 <label for="Category">Total Question</label>
                 <input class="form-control mb-4" type="number" name="number-of-question" id="number-of-question">
             </form>
