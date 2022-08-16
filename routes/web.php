@@ -42,4 +42,8 @@ Route::get('/generate/question-type', [App\Http\Controllers\QuestionController::
 
 Route::get('/question-collection', [App\Http\Controllers\QuestionController::class, 'question_collection'])->name('home');
 
+Route::get('/generate/add-question-manual', [App\Http\Controllers\QuestionController::class, 'add_question_manual'])->name('home');
+
+Route::get('/generate/add-question-test', [App\Http\Controllers\QuestionController::class, 'add_question_test'])->name('home');
+
 Route::post('/store-create-test', [App\Http\Controllers\Cbt::class, 'storeNewTest'])->name('home');

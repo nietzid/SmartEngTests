@@ -12,8 +12,8 @@
             Below is your question collection. You can add the question that’s been generated to the test.
         </p>
         <div class="mb-2">
-            <a href="cbt_test.php">
-                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Test Preview</button>
+            <a href="<?= url('generate/add-question-manual'); ?>">
+                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
             </a>
         </div>
     </div>

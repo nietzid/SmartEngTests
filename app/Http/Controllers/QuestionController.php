@@ -34,4 +34,14 @@ class QuestionController extends Controller
         // }
         return view('pages/Generate/question_collection',['questions'=>$questions]);
     }
+
+    public function add_question_manual()
+    {
+        return view('pages/Generate/add_question_manual');
+    }
+
+    public function add_question_test()
+    {
+        return view('pages/Generate/add_question_test');
+    }
 }
