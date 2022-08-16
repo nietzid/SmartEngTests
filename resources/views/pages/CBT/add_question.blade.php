@@ -1,47 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 fixed-top" style=" background-color: white !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="index.php">
-                <img src="static/plugins/images/assets/img/logo.png" width="60%" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight: 600;">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="index.php">Home&emsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="test_collection.php">Question Collection&emsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="generate.php">Generate&emsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="cbt.php">CBT&emsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="login.php">Sign In&emsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white !important;" aria-current="page" href="logout.php">Logout&emsp;</a>
-                    </li>
-                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <a class='dropdown-item' href='/'>
-                            Masuk
-                        </a>
-                        <a class='dropdown-item' href='/'>
-                            Profile
-                        </a>
-                    </div> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="container-fluid mt-5">
         <div style="color: #CA6035;" class="row p-4 pb-0 pt-5">
             <h3>
