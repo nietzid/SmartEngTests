@@ -18,10 +18,12 @@ class QuestionBankFactory extends Factory
     public function definition()
     {
         $passagesIDs= DB::table('passages')->pluck('id');
+        $category=["Summary","Short Answer Question","Fill in The Blank","True or False","Multiple Choice"];
         return [
             'question' => fake()->sentence(),
             'answer' => fake()->sentence(), 
             'passage_id' => fake()->randomElement($passagesIDs),
+            'category'=> fake()->randomElement($category),
         ];
     }
 }
