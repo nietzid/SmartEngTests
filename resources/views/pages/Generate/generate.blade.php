@@ -14,7 +14,7 @@
     <div class="row text-center">
         <div class="col-lg-4 col-md-4 col-12 mb-4">
             <!-- <a href="http://127.0.0.1:5000/generate_question" style="color: #3E6D81; text-decoration: none;"> -->
-            <a href="http://127.0.0.1:5000/generate_question" style="color: #3E6D81; text-decoration: none;">
+            <a href="http://127.0.0.1:5000/article" style="color: #3E6D81; text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <img src="/assets/img/error_identification.png" alt="">

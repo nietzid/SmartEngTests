@@ -11,19 +11,64 @@
 
         <div class="row mt-5">
             <form action="" method="post">
-                <label for="Passage">Passage</label>
-                <textarea class="form-control mb-3" type="text" name="passage_id" id="passage_id" rows="7"></textarea>
+                <label for="Passage">
+                    <b>
+                        Passage
+                    </b>
+                </label>
+                <p class="mt-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique corporis eveniet omnis soluta quod minima, doloremque commodi hic nostrum, earum aperiam labore id delectus, eos praesentium itaque aliquid. Officia, repellendus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique corporis eveniet omnis soluta quod minima, doloremque commodi hic nostrum, earum aperiam labore id delectus, eos praesentium itaque aliquid. Officia, repellendus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique corporis eveniet omnis soluta quod minima, doloremque commodi hic nostrum, earum aperiam labore id delectus, eos praesentium itaque aliquid. Officia, repellendus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique corporis eveniet omnis soluta quod minima, doloremque commodi hic nostrum, earum aperiam labore id delectus, eos praesentium itaque aliquid. Officia, repellendus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique corporis eveniet omnis soluta quod minima, doloremque commodi hic nostrum, earum aperiam labore id delectus, eos praesentium itaque aliquid. Officia, repellendus?
+                </p>
 
-                <label for="Question">Question</label>
-                <input class="form-control mb-3" type="text" name="question" id="question">
+                <div class="mb-4 mt-4">
+                    <h6>
+                        <b>
+                            No. 1
+                        </b>
+                    </h6>
+                    <label for="Question">
+                        Question
+                    </label>
+                    <input class="form-control mb-1" type="text" name="question" id="question">
 
-                <label for="Answer">Answer</label>
-                <input class="form-control mb-3" type="text" name="answer" id="answer">
+                    <label for="Answer">
+                        Answer
+                    </label>
+                    <input class="form-control mb-1" type="text" name="answer" id="answer">
+                </div>
+                <div class="mb-4">
+                    <h6>
+                        <b>
+                            No. 2
+                        </b>
+                    </h6>
+                    <label for="Question">
+                        Question
+                    </label>
+                    <input class="form-control mb-1" type="text" name="question" id="question">
 
-                <label for="Category">Total Question</label>
-                <input class="form-control mb-4" type="number" name="number-of-question" id="number-of-question">
+                    <label for="Answer">
+                        Answer
+                    </label>
+                    <input class="form-control mb-1" type="text" name="answer" id="answer">
+                </div>
+                <div class="mb-4">
+                    <h6>
+                        <b>
+                            No. 3
+                        </b>
+                    </h6>
+                    <label for="Question">
+                        Question
+                    </label>
+                    <input class="form-control mb-1" type="text" name="question" id="question">
+
+                    <label for="Answer">
+                        Answer
+                    </label>
+                    <input class="form-control mb-1" type="text" name="answer" id="answer">
             </form>
-            <a href="<?= url('generate/add-question-test'); ?>">
+            <a href="<?= url('generate/question-collection'); ?>">
                 <button name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
             </a>
         </div>

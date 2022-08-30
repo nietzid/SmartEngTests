@@ -5,7 +5,7 @@
     <div style="color: #CA6035;" class="row p-4 pb-0 pt-5">
         <h3>
             <b>
-                Add Question to Your Test!
+                Question Collection
             </b>
         </h3>
         <p style="color: black;">
@@ -31,7 +31,14 @@
                 @foreach ($questions as $question)
                 @if ($question->category == 'Summary')
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
+                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
+                        {{$question->question}}
+                        <span style="float: right;">
+                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 @endif
                 @endforeach
@@ -48,7 +55,14 @@
                 @foreach ($questions as $question)
                 @if ($question->category == 'Short Answer Question')
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
+                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
+                        {{$question->question}}
+                        <span style="float: right;">
+                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 @endif
                 @endforeach
@@ -65,7 +79,14 @@
                 @foreach ($questions as $question)
                 @if ($question->category == 'Fill in The Blank')
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
+                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
+                        {{$question->question}}
+                        <span style="float: right;">
+                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 @endif
                 @endforeach
@@ -82,7 +103,14 @@
                 @foreach ($questions as $question)
                 @if ($question->category == 'True or False')
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
+                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
+                        {{$question->question}}
+                        <span style="float: right;">
+                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 @endif
                 @endforeach
@@ -99,7 +127,14 @@
                 @foreach ($questions as $question)
                 @if ($question->category == 'Multiple Choice')
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">{{$question->question}}</div>
+                    <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
+                        {{$question->question}}
+                        <span style="float: right;">
+                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                            </button>
+                        </span>
+                    </div>
                 </div>
                 @endif
                 @endforeach
