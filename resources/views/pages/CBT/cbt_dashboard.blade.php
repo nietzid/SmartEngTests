@@ -25,19 +25,21 @@
     <div class="row m-5">
         @foreach ($tests as $test)            
         <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-            <div class="card p-2">
-                <div class="card-body">
-                    {{$test->title}}
-                    <hr class="p-3 pt-0">
-                    <p>
-                        {{$test->description}}
-                        <br>
-                        {{$test->date}} 
-                        <br>
-                        {{$test->start_time}} - {{$test->end_time}}
-                    </p>
+            <a href="{{ url('cbt/admin', $market->id) }}" style="text-decoration: none; color: black;">
+                <div class="card p-2">
+                    <div class="card-body">
+                        {{$test->title}}
+                        <hr class="p-3 pt-0">
+                        <p>
+                            {{$test->description}}
+                            <br>
+                            {{$test->date}} 
+                            <br>
+                            {{$test->start_time}} - {{$test->end_time}}
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         @endforeach
     </div>
