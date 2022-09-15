@@ -25,7 +25,7 @@
     <div class="row m-5">
         @foreach ($tests as $test)            
         <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-            <a href="{{ url('cbt/admin', $market->id) }}" style="text-decoration: none; color: black;">
+            <a href="{{ url('cbt/admin-test-detail', $test->id) }}" style="text-decoration: none; color: black;">
                 <div class="card p-2">
                     <div class="card-body">
                         {{$test->title}}

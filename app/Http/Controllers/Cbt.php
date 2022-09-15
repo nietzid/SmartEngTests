@@ -66,4 +66,11 @@ class Cbt extends Controller
         $testCollection->save();
         return view('pages/CBT/cbt_createtest');
     }
+
+    public function cbtAdminDetailTest($id)
+    {
+        $testDetail = TestCollection::find($id);
+        return view('pages/CBT/cbt_admin_detail_test',["id" => $id, "title" => $testDetail->title, "description" => $testDetail->description, "date" => $testDetail->date, "start_time" => $testDetail->start_time, "end_time" => $testDetail->end_time]);
+    }
+    
 }
