@@ -46,9 +46,8 @@ class QuestionController extends Controller
 
     public function addQuestiontoTest($testId, $id)
     {
-        $questionModel = new QuestionBank();
         $testQuestionModel = new TestQuestion();
-        $testQuestionModel::firstOrNew([
+        $testQuestionModel::insert([
             'question_id' => $id,
             'test_id' => $testId,
         ]);
