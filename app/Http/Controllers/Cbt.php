@@ -80,4 +80,9 @@ class Cbt extends Controller
         $questions = $questionModel::all();
         return view('pages/CBT/select_question', ['questions' => $questions]);
     }
+
+    public function preview()
+    {
+        return view('pages/CBT/preview');
+    }
 }
