@@ -10,7 +10,7 @@
         </h2>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
 
         <div class="row">
             <div class="col">
@@ -76,6 +76,13 @@
                         <p>
                             <iconify-icon inline icon="akar-icons:check" style="color: green; font-size: 20px;"></iconify-icon> Parsing question from Question Collection to CBT
                         </p>
+                        <br>
+                        <button class="btn" style="background-color: green; width:100%;">
+                            <a href="#" style="color: white; text-decoration: none;">
+                                UPGRADE NOW
+                                </b>
+                            </a>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -109,8 +109,8 @@
             <p class="pb-2 pt-3" style="color: #3E6D81; font-weight: bold;">
                 About US
             </p>
-            <p style="font-size:13px; text-align: justify;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus qui doloremque magnam atque nobis esse laudantium. Delectus voluptatibus aliquam fugit magni exercitationem blanditiis, dolorem quaerat nobis ratione maxime officia?
+            <p style="font-size:14px; text-align: justify;">
+                Smart EngTest is a website for generating articles into English test questions. This website is made to help teachers and students .
             </p>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 p-5">
@@ -121,14 +121,12 @@
                     <a href="index.php" style="text-decoration: none; color: black; font-size: 14px">Upgrade Account</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Lorem</a> <br><br>
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Lorem</a> <br><br>
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Lorem</a> <br><br>
+                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Computer Based Test</a> <br><br>
+                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Generate Question</a> <br><br>
+                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Question Collection</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="#faq" style="text-decoration: none; color: black; font-size: 14px">Ipsum</a> <br><br>
-                    <a href="#faq" style="text-decoration: none; color: black; font-size: 14px">Ipsum</a> <br><br>
-                    <a href="#faq" style="text-decoration: none; color: black; font-size: 14px">Ipsum</a> <br><br>
+                    <a href="#faq" style="text-decoration: none; color: black; font-size: 14px">Test Collection</a> <br><br>
                 </div>
             </div>
         </div>
