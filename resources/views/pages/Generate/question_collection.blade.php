@@ -34,9 +34,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
-                            </button>
+                            <a href="/remove-question/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>
