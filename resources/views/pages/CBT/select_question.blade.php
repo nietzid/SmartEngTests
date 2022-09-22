@@ -55,7 +55,7 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/add-question-to-test/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
                                     <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
@@ -81,7 +81,7 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/add-question-to-test/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
                                     <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
@@ -107,7 +107,7 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/add-question-to-test/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
                                     <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
@@ -133,7 +133,7 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/add-question-to-test/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
                                     <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
