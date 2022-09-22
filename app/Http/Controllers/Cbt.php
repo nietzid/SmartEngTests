@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TestCollection;
 use Illuminate\Http\Request;
+use App\Models\QuestionBank;
 
 class Cbt extends Controller
 {
@@ -70,7 +71,13 @@ class Cbt extends Controller
     public function cbtAdminDetailTest($id)
     {
         $testDetail = TestCollection::find($id);
-        return view('pages/CBT/cbt_admin_detail_test',["id" => $id, "title" => $testDetail->title, "description" => $testDetail->description, "date" => $testDetail->date, "start_time" => $testDetail->start_time, "end_time" => $testDetail->end_time]);
+        return view('pages/CBT/cbt_admin_detail_test', ["id" => $id, "title" => $testDetail->title, "description" => $testDetail->description, "date" => $testDetail->date, "start_time" => $testDetail->start_time, "end_time" => $testDetail->end_time]);
     }
-    
+
+    public function selectQuestionTest()
+    {
+        $questionModel = new QuestionBank();
+        $questions = $questionModel::all();
+        return view('pages/CBT/select_question', ['questions' => $questions]);
+    }
 }

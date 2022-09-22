@@ -32,7 +32,7 @@ class QuestionController extends Controller
         //         $question->question_type = 'Short Answer';
         //     }
         // }
-        return view('pages/Generate/question_collection',['questions'=>$questions]);
+        return view('pages/Generate/question_collection', ['questions' => $questions]);
     }
 
     public function add_question_manual()

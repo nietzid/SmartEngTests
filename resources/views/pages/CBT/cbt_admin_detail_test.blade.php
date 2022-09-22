@@ -7,7 +7,7 @@
         </b>
     </h3>
     <p class="mb-5">
-       {{ $description}}
+        {{ $description}}
     </p>
     <form method="post" action="">
         <table class="table table-borderless">
@@ -44,11 +44,11 @@
         </table>
 
         <div class="mb-2 mt-2">
-            <a href="<?= url('cbt/start-test'); ?>">
+            <a href="<?= url('cbt/select-question'); ?>">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81;">Add Question</button>
             </a>
             &emsp;
-            <a href="<?= url('cbt/start-test'); ?>">
+            <a href="<?= url('cbt/preview'); ?>">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81;">Preview</button>
             </a>
         </div>
