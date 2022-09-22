@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\QuestionBank;
+use App\Models\TestQuestion;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -43,5 +44,13 @@ class QuestionController extends Controller
     public function add_question_test()
     {
         return view('pages/Generate/add_question_test');
+    }
+    public function removeQuestion($id)
+    {
+        $questionModel = new QuestionBank();
+        $testQuestionModel = new TestQuestion();
+        $testQuestionModel::where('question_id', $id)->delete();
+        $questionModel::where('id', $id)->delete();
+        return redirect('/question-collection');
     }
 }

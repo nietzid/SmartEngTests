@@ -58,4 +58,6 @@ Route::post('/store-create-test', [App\Http\Controllers\Cbt::class, 'storeNewTes
 
 Route::get('/cbt/select-question', [App\Http\Controllers\Cbt::class, 'selectQuestionTest'])->name('home');
 
+Route::get('/remove-question/{id}', [App\Http\Controllers\QuestionController::class, 'removeQuestion'])->name('home');
+
 // Route::get('/cbt/admin/{id}', [App\Http\Controllers\Cbt::class, 't'])->name('home');
