@@ -74,10 +74,12 @@ class Cbt extends Controller
         return view('pages/CBT/cbt_admin_detail_test', ["id" => $id, "title" => $testDetail->title, "description" => $testDetail->description, "date" => $testDetail->date, "start_time" => $testDetail->start_time, "end_time" => $testDetail->end_time]);
     }
 
-    public function selectQuestionTest()
+    public function selectQuestionTest($id)
     {
         $questionModel = new QuestionBank();
         $questions = $questionModel::all();
-        return view('pages/CBT/select_question', ['questions' => $questions]);
+        return view('pages/CBT/select_question', [
+            'id' => $id,
+            'questions' => $questions]);
     }
 }

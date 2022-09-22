@@ -29,9 +29,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
-                            </button>
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -53,9 +55,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
-                            </button>
+                            <a href="/add-question-to-test/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -77,9 +81,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
-                            </button>
+                            <a href="/add-question-to-test/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -101,9 +107,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
-                            </button>
+                            <a href="/add-question-to-test/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -125,9 +133,11 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
-                            </button>
+                            <a href="/add-question-to-test/{{$question->id}}">
+                                <button class="btn btn-light" style="border: 1px solid lightgrey;">
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
+                                </button>
+                            </a>
                         </span>
                     </div>
                 </div>

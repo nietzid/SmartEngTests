@@ -44,7 +44,7 @@
         </table>
 
         <div class="mb-2 mt-2">
-            <a href="<?= url('cbt/select-question'); ?>">
+            <a href="{{ url('cbt/select-question', $id) }}">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81;">Add Question</button>
             </a>
             &emsp;

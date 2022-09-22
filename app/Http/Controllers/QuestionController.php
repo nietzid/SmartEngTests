@@ -22,17 +22,6 @@ class QuestionController extends Controller
     {
         $questionModel = new QuestionBank();
         $questions = $questionModel::all();
-        // foreach ($questions as $question) {
-        //     if ($question->question_type == 'Multiple Choice Question') {
-        //         $mcq
-        //     } else if ($question->question_type == 'TF') {
-        //         $question->question_type = 'True or False';
-        //     } else if ($question->question_type == 'FIB') {
-        //         $question->question_type = 'Fill in the Blank';
-        //     } else if ($question->question_type == 'SA') {
-        //         $question->question_type = 'Short Answer';
-        //     }
-        // }
         return view('pages/Generate/question_collection', ['questions' => $questions]);
     }
 
@@ -45,6 +34,7 @@ class QuestionController extends Controller
     {
         return view('pages/Generate/add_question_test');
     }
+
     public function removeQuestion($id)
     {
         $questionModel = new QuestionBank();
@@ -52,5 +42,16 @@ class QuestionController extends Controller
         $testQuestionModel::where('question_id', $id)->delete();
         $questionModel::where('id', $id)->delete();
         return redirect('/question-collection');
+    }
+
+    public function addQuestiontoTest($testId, $id)
+    {
+        $questionModel = new QuestionBank();
+        $testQuestionModel = new TestQuestion();
+        $testQuestionModel::firstOrNew([
+            'question_id' => $id,
+            'test_id' => $testId,
+        ]);
+        return redirect('/cbt/select-question/' . $testId);
     }
 }
