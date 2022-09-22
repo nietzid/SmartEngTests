@@ -48,7 +48,7 @@
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81;">Add Question</button>
             </a>
             &emsp;
-            <a href="<?= url('cbt/preview'); ?>">
+            <a href="<?= url('cbt/preview-test'); ?>">
                 <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81;">Preview</button>
             </a>
         </div>

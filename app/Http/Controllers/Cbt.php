@@ -82,4 +82,9 @@ class Cbt extends Controller
             'id' => $id,
             'questions' => $questions]);
     }
+
+    public function preview()
+    {
+        return view('pages/CBT/preview');
+    }
 }

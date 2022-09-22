@@ -23,17 +23,18 @@
         </div>
     </div>
     <div class="row m-5">
-        @foreach ($tests as $test)            
+        @foreach ($tests as $test)
         <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
             <a href="{{ url('cbt/admin-test-detail', $test->id) }}" style="text-decoration: none; color: black;">
-                <div class="card p-2">
+                <div class="card p-2" style="min-height: 250px;">
                     <div class="card-body">
                         {{$test->title}}
                         <hr class="p-3 pt-0">
-                        <p>
+                        <p style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">
                             {{$test->description}}
-                            <br>
-                            {{$test->date}} 
+                        </p>
+                        <p>
+                            {{$test->date}}
                             <br>
                             {{$test->start_time}} - {{$test->end_time}}
                         </p>
