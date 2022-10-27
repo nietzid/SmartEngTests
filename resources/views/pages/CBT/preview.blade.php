@@ -30,23 +30,19 @@
             </p>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="A" />
-                <label class="form-check-label">
-                </label>
+                <label class="form-check-label"> Option </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="B" />
-                <label class="form-check-label">
-                </label>
+                <label class="form-check-label"> Option </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="C" />
-                <label class="form-check-label">
-                </label>
+                <label class="form-check-label"> Option </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="D" />
-                <label class="form-check-label">
-                </label>
+                <label class="form-check-label"> Option </label>
             </div>
             <div class="row mt-3" style="float: right">
                 <a href="<?= url('cbt/test-result'); ?>">

@@ -5,17 +5,12 @@
     <div style="color: #CA6035;" class="row p-4 pb-0 pt-5">
         <h3>
             <b>
-                Question Collection
+                Add Question To Your Test
             </b>
         </h3>
         <p style="color: black;">
             Below is your question collection. You can add the question that’s been generated to the test.
         </p>
-        <div class="mb-2">
-            <a href="<?= url('generate/add-question-manual'); ?>">
-                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
-            </a>
-        </div>
     </div>
 
     <div class="row">
@@ -34,9 +29,9 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/remove-question/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
                             </a>
                         </span>
@@ -60,9 +55,9 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/remove-question/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
                             </a>
                         </span>
@@ -86,9 +81,9 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/remove-question/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
                             </a>
                         </span>
@@ -112,9 +107,9 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/remove-question/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
                             </a>
                         </span>
@@ -138,9 +133,9 @@
                     <div class="accordion-body p-4 pt-3 pb-3" style="background-color: white !important;">
                         {{$question->question}}
                         <span style="float: right;">
-                            <a href="/remove-question/{{$question->id}}">
+                            <a href="/add-question-to-test/{{$id}}/{{$question->id}}">
                                 <button class="btn btn-light" style="border: 1px solid lightgrey;">
-                                    <iconify-icon inline icon="fluent:delete-20-regular" style="color: red; font-size: 20px;"></iconify-icon>
+                                    <iconify-icon inline icon="fluent:add-16-filled" style="color: green;"></iconify-icon>
                                 </button>
                             </a>
                         </span>
