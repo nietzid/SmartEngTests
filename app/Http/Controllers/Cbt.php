@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\TestCollection;
 use Illuminate\Http\Request;
 use App\Models\QuestionBank;
-use App\Models\TestQuestion;
 
 class Cbt extends Controller
 {
@@ -77,8 +76,8 @@ class Cbt extends Controller
 
     public function selectQuestionTest($id)
     {
-        $testQuestion = new TestQuestion();
-        $questions = $testQuestion->getNewQuestions($id);
+        $questionModel = new QuestionBank();
+        $questions = $questionModel::all();
         return view('pages/CBT/select_question', [
             'id' => $id,
             'questions' => $questions]);
