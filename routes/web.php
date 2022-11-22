@@ -64,4 +64,6 @@ Route::get('/remove-question/{id}', [App\Http\Controllers\QuestionController::cl
 
 Route::get('/add-question-to-test/{testId}/{id}', [App\Http\Controllers\QuestionController::class, 'addQuestiontoTest'])->name('home');
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 // Route::get('/cbt/admin/{id}', [App\Http\Controllers\Cbt::class, 't'])->name('home');

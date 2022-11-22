@@ -13,7 +13,7 @@
                     </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ ('You are logged in!'.Auth::id()) }}
                 </div>
             </div>
         </div>
