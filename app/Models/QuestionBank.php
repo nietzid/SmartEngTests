@@ -11,7 +11,7 @@ class QuestionBank extends Model
     public $timestamps = false;
     protected $table = 'question_banks';
     protected $primaryKey = 'id';
-    protected $fillable = ['user_id','question', 'answer', 'passage_id', 'category'];
+    protected $fillable = ['question', 'answer', 'passage_id', 'category'];
     use HasFactory;
 
     public function getQuestions()

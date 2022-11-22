@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\QuestionBank;
 use App\Models\TestQuestion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class QuestionController extends Controller
 {
@@ -13,16 +15,18 @@ class QuestionController extends Controller
         return view('pages/Generate/generate');
     }
 
-    public function generate()
-    {
-        return view('pages/Generate/generate_question');
-    }
-
     public function question_collection()
     {
         $questionModel = new QuestionBank();
         $questions = $questionModel::all();
         return view('pages/Generate/question_collection', ['questions' => $questions]);
+    }
+
+    public function detail_collection($question_type)
+    {
+        $questionModel = new QuestionBank();
+        $questions = $questionModel::all()->where('user_id', Auth::id())->where('question_type', $question_type);
+        return view('pages/Generate/detail_collection', ['questions' => $questions, 'question_type' => $question_type]);
     }
 
     public function add_question_manual()
