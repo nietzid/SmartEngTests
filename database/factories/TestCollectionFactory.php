@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\TestCollection>
@@ -16,7 +17,9 @@ class TestCollectionFactory extends Factory
      */
     public function definition()
     {
+        $userIDs= DB::table('users')->pluck('id');
         return [
+            'user_id' => fake()->randomElement($userIDs),
             'title' => "ab",
             'description' => fake()->paragraph(2),
             'date' => fake()->date(),
