@@ -32,7 +32,9 @@ Route::get('/cbt', [App\Http\Controllers\CbtController::class, 'index']);
 
 Route::get('/cbt/create-test', [App\Http\Controllers\CbtController::class, 'createTest']);
 
-Route::get('/cbt/start-test', [App\Http\Controllers\CbtController::class, 'startTest']);
+Route::get('/cbt/test/{testCode}', [App\Http\Controllers\CbtController::class, 'validateTest']);
+
+Route::get('/cbt/test/{testCode}/{id}', [App\Http\Controllers\CbtController::class, 'startTest']);
 
 Route::get('/cbt/test-landing-page', [App\Http\Controllers\CbtController::class, 'testLandingPage']);
 

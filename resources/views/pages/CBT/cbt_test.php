@@ -33,6 +33,7 @@ require 'conn.php';
     </nav>
 
     <div class="p-5 pb-3 font-poppins">
+        <?dd($question)?>
         <p id="demo" class="mt-4" style="color: #3e6d81; font-size: 20px; font-weight: 600; text-align: right;"></p>
         <div class="row mb-4 mt-2 gap-4">
             <?php

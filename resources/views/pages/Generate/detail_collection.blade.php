@@ -5,20 +5,21 @@
     <div style="color: #CA6035;" class="row mb-5 pt-5 mt-3 text-center">
         <h3>
             <b>
-                <?=$question_type?>
+                <?= $question_type;
+        // dd($questions);
+                ?>
+                
             </b>
         </h3>
     </div>
 
     @foreach ($questions as $question)
-    @if ($question->category == 'Error Identification')
     <div class="card p-3 mt-3 shadow-md">
-        {{$question->passage_id}}
+        {{$question->passages}}
         <br>
         {{$question->question}}
         <br>
-        {{$question->answer}}
-        <br>
+        {{$question->answer}} 
         <div class="row mt-4">
             <div class="col">
                 <span>
@@ -38,7 +39,6 @@
             </div>
         </div>
     </div>
-    @endif
     @endforeach
 </div>
 @endsection

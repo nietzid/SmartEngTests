@@ -2,31 +2,12 @@
 
 @section('content')
 <div class="p-5 pb-3 font-poppins">
+
     <p id="demo" style="color: #3e6d81; font-size: 20px; font-weight: 600; text-align: right;"></p>
     <div class="row mb-4 mt-2 gap-4">
         <div class="col-lg-9 col-md-9 col-12 p-4" style="text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Cumque repellendus consequatur eveniet
-                laborum. Rerum in perferendis labore officiis
-                reprehenderit officia quas dolore minus, saepe
-                repudiandae laudantium aliquam temporibus, inventore
-                maxime? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Cumque repellendus consequatur
-                eveniet laborum. Rerum in perferendis labore
-                officiis reprehenderit officia quas dolore minus,
-                saepe repudiandae laudantium aliquam temporibus,
-                inventore maxime? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Cumque repellendus
-                consequatur eveniet laborum. Rerum in perferendis
-                labore officiis reprehenderit officia quas dolore
-                minus, saepe repudiandae laudantium aliquam
-                temporibus, inventore maxime? Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Cumque
-                repellendus consequatur eveniet laborum. Rerum in
-                perferendis labore officiis reprehenderit officia
-                quas dolore minus, saepe repudiandae laudantium
-                aliquam temporibus, inventore maxime?
+                
             </p>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="A" />

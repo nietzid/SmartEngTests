@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\TestCollection;
 use Illuminate\Http\Request;
 use App\Models\QuestionBank;
+use App\Models\TestPassages;
 use App\Models\TestQuestion;
 use Illuminate\Support\Facades\Auth;
+use Psy\CodeCleaner;
 
 class CbtController extends Controller
 {
@@ -20,9 +22,15 @@ class CbtController extends Controller
         return view('pages/CBT/cbt_createtest');
     }
 
-    public function startTest()
+    public function startTest($testCode)
     {
-        return view('pages/CBT/cbt_test');
+        $testCollection = new TestCollection;
+        $questionBank = new QuestionBank;
+        $testQuestion = new TestQuestion;
+        $testId = $testCollection->where('code', $testCode)->first();
+        $questionId = $testQuestion->where('test_id', $testId->id)->pluck('question_id');
+        $question = $questionBank->whereIn('id', $questionId)->get();
+        return view('pages/CBT/cbt_test', ['question' => $question]);
     }
 
     public function testLandingPage()
@@ -70,7 +78,7 @@ class CbtController extends Controller
         $testCollection->code = $this->generateUniqueCode();
         $testCollection->password = $request->password;
         $testCollection->save();
-        return view('pages/CBT/cbt_createtest');
+        return redirect('cbt/cbt-dashboard');
     }
 
     public function cbtAdminDetailTest($id)
@@ -87,14 +95,14 @@ class CbtController extends Controller
         ]);
     }
 
-    public function detailSelectQuestionTest($id,$question_type)
+    public function detailSelectQuestionTest($id ,$question_type)
     {
-        $testQuestion = new TestQuestion();
-        $questions = $testQuestion->getNewQuestions($id)->where('user_id', Auth::id())->where('question_type', $question_type);
+        $questionModel = new QuestionBank();
+        $questions = $questionModel::select('*')->where('user_id', Auth::id())->where('category', $question_type)->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
         return view('pages/CBT/detail_select_question', [
             'id' => $id,
             'questions' => $questions,
-            'question_type' => $question_type
+            'question_type' => $question_type,
         ]);
     }
 
@@ -102,4 +110,22 @@ class CbtController extends Controller
     {
         return view('pages/CBT/preview');
     }
+
+    public function generateUniqueCode(){
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersNumber = strlen($characters);
+        $codeLength = 6;
+        $code = '';
+        while (strlen($code) < $codeLength) {
+            $position = rand(0, $charactersNumber - 1);
+            $character = $characters[$position];
+            $code = $code.$character;
+        }
+
+        if (TestCollection::where('code', $code)->exists()) {
+            $this->generateUniqueCode();
+        }
+        return $code;
+    }
+
 }

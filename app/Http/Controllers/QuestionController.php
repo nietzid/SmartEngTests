@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\QuestionBank;
+use App\Models\TestPassages;
 use App\Models\TestQuestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,8 +26,11 @@ class QuestionController extends Controller
     public function detail_collection($question_type)
     {
         $questionModel = new QuestionBank();
-        $questions = $questionModel::all()->where('user_id', Auth::id())->where('question_type', $question_type);
-        return view('pages/Generate/detail_collection', ['questions' => $questions, 'question_type' => $question_type]);
+        $questions = $questionModel::select('*')->where('user_id', Auth::id())->where('category', $question_type)->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
+        return view('pages/Generate/detail_collection', [
+            'questions' => $questions, 
+            'question_type' => $question_type
+        ]);
     }
 
     public function add_question_manual()
@@ -48,13 +52,14 @@ class QuestionController extends Controller
         return redirect('/question-collection');
     }
 
-    public function addQuestiontoTest($testId, $id)
-    {
-        $testQuestionModel = new TestQuestion();
-        $testQuestionModel::insert([
-            'question_id' => $id,
-            'test_id' => $testId,
-        ]);
-        return redirect('/cbt/select-question/' . $testId);
-    }
+    // public function addQuestiontoTest($testId, $id)
+    // {
+    //     $testQuestionModel = new TestQuestion();
+    //     $testQuestionModel::insert([
+    //         'question_id' => $id,
+    //         'test_id' => $testId,
+    //     ]);
+    //     return redirect('/cbt/select-question/' . $testId);
+    // }
+    //kalo error salah ira
 }

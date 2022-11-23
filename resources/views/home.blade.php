@@ -5,7 +5,7 @@
     <div class="container-fluid pb-5">
         <div class="row p-5">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <img src="assets/images/header-img.png" class="flex" width="80%" alt="">
+                <img src="assets/images/header-img.png" class="flex" width="60%" alt="">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-12" style="display: flex; align-items: center">
                 <div class="wrap">
