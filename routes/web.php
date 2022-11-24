@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GenerateController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 Auth::routes();
 
@@ -92,4 +95,9 @@ Route::get('/upgrade-account/success-upgrade', [App\Http\Controllers\UserControl
 
 Route::get('/demo', [App\Http\Controllers\UserController::class, 'demo']);
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+// Route::get('/generate', [GenerateController::class, 'generate'])->name('generate');
+
+Route::get('/scrapping', [GenerateController::class, 'scrapping'])->name('generate');
+
