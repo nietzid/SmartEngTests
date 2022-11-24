@@ -21,8 +21,6 @@
     <!-- Styles -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-    @livewireStyles
 </head>
 
 <body>
@@ -102,8 +100,6 @@
         });
     </script>
     <script src="{{ asset('https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js') }}"></script>
-
-    @livewireScripts
 </body>
 
 </html>

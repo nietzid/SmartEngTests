@@ -6,25 +6,34 @@
         <h3>
             <b>
                 <?= $question_type;
-        // dd($questions);
+                // dd($questions);
                 ?>
-                
+
             </b>
         </h3>
     </div>
 
     @foreach ($questions as $question)
-    <div class="card p-3 mt-3 shadow-md">
-        {{$question->passages}}
-        <br>
-        {{$question->question}}
-        <br>
-        {{$question->answer}} 
+    <div class="card p-4 mt-3 shadow-md" style="color: #555555;">
+        <div class="row pb-3">
+            <b>
+                {{$question->passages}}
+            </b>
+        </div>
+        <div class="row ps-3">
+            A. {{$question->question}} <br>
+            B. {{$question->question}} <br>
+            C. {{$question->question}} <br>
+            D. {{$question->question}} <br>
+            <b class="pt-2 ps-0">
+                Ans: {{$question->answer}}
+            </b>
+        </div>
         <div class="row mt-4">
             <div class="col">
                 <span>
                     <a href="/edit-question/{{$question->id}}">
-                        <button class="btn" style="background-color: #3E6D81;">
+                        <button type="button btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #3E6D81;">
                             <iconify-icon inline icon="akar-icons:edit" style="color: white; font-size: 17px;"></iconify-icon>
                         </button>
                     </a>

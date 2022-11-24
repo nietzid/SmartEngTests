@@ -18,50 +18,48 @@
         </div>
     </div>
 
-    <div class="row pt-5">
-        <div class="row text-center">
-            <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <!-- <a href="http://127.0.0.1:5000/generate_question" style="color: #3E6D81; text-decoration: none;"> -->
-                <a href="{{ asset('/detail-collection/Error Identification')}}" style="color: #3E6D81; text-decoration: none;">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="/assets/images/error_identification.png" alt="">
-                            <br><br>
-                            <b>
-                                Error Identification
-                            </b>
-                        </div>
+    <div class="row text-center mt-3">
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <a href="{{ asset('/detail-collection/Error Identification')}}" style="color: #3E6D81; text-decoration: none;">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="/assets/images/error_identification.png" alt="">
+                        <br><br>
+                        <b>
+                            Error Identification
+                        </b>
                     </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <a href="{{ asset('/detail-collection/Sentence Completion')}}" style="color: #3E6D81; text-decoration: none;">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="/assets/images/sentence_completion.png" alt="">
-                            <br><br>
-                            <b>
-                                Sentence Completion
-                            </b>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12 mb-4">
-                <a href="{{ asset('/detail-collection/Vocabulary')}}" style="color: #3E6D81; text-decoration: none;">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="/assets/images/vocabulary.png" alt="">
-                            <br><br>
-                            <b>
-                                Vocabulary
-                            </b>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-        <!-- <div class="accordion accordion-flush m-0" id="accordionFlushExample">
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <a href="{{ asset('/detail-collection/Sentence Completion')}}" style="color: #3E6D81; text-decoration: none;">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="/assets/images/sentence_completion.png" alt="">
+                        <br><br>
+                        <b>
+                            Sentence Completion
+                        </b>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <a href="{{ asset('/detail-collection/Vocabulary')}}" style="color: #3E6D81; text-decoration: none;">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="/assets/images/vocabulary.png" alt="">
+                        <br><br>
+                        <b>
+                            Vocabulary
+                        </b>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="accordion accordion-flush m-0" id="accordionFlushExample">
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -192,6 +190,6 @@
                 @endforeach
             </div>
         </div> -->
-    </div>
+    <!-- </div> -->
 </div>
 @endsection

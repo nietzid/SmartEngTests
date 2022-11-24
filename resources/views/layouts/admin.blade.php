@@ -29,7 +29,6 @@
     <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    @livewireStyles
 </head>
 
 <body>
@@ -60,8 +59,6 @@
     <script src="js/dataTables.bootstrap4.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 
-
-    @livewireScripts
 </body>
 
 </html>
