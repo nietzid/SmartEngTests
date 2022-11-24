@@ -52,14 +52,13 @@ class QuestionController extends Controller
         return redirect('/question-collection');
     }
 
-    // public function addQuestiontoTest($testId, $id)
-    // {
-    //     $testQuestionModel = new TestQuestion();
-    //     $testQuestionModel::insert([
-    //         'question_id' => $id,
-    //         'test_id' => $testId,
-    //     ]);
-    //     return redirect('/cbt/select-question/' . $testId);
-    // }
-    //kalo error salah ira
+    public function addQuestiontoTest($testId, $id)
+    {
+        $testQuestionModel = new TestQuestion();
+        $testQuestionModel::insert([
+            'question_id' => $id,
+            'test_id' => $testId,
+        ]);
+        return redirect('/cbt/select-question/' . $testId);
+    }
 }

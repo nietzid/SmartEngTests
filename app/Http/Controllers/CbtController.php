@@ -22,15 +22,16 @@ class CbtController extends Controller
         return view('pages/CBT/cbt_createtest');
     }
 
-    public function startTest($testCode)
+    public function startTest($testCode, $id)
     {
         $testCollection = new TestCollection;
         $questionBank = new QuestionBank;
         $testQuestion = new TestQuestion;
         $testId = $testCollection->where('code', $testCode)->first();
         $questionId = $testQuestion->where('test_id', $testId->id)->pluck('question_id');
-        $question = $questionBank->whereIn('id', $questionId)->get();
-        return view('pages/CBT/cbt_test', ['question' => $question]);
+        $question = $questionBank->select('*')->whereIn('question_banks.id', $questionId);
+        $questions = $question->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
+        return view('pages/CBT/cbt_test', ['questions' => $questions,'id' => $id]);
     }
 
     public function testLandingPage()
