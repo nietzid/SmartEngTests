@@ -88,6 +88,8 @@ Route::get('/upgrade-account/plan-option', [App\Http\Controllers\UserController:
 
 Route::get('/upgrade-account/payment', [App\Http\Controllers\UserController::class, 'payment']);
 
+Route::get('/upgrade-account/success-upgrade', [App\Http\Controllers\UserController::class, 'success_upgrade']);
+
 Route::get('/demo', [App\Http\Controllers\UserController::class, 'demo']);
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

@@ -10,33 +10,33 @@
     <form method="post" action="">
         <table class="table">
             <tr>
-                <td width="15%">Test Name</td>
+                <td width="15%">Test Name :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": English Test 1">
+                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="English Test 1">
                 </td>
             </tr>
             <tr>
-                <td>Question Type</td>
+                <td>Question Type :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="testcode" class="form-control" id="testcode" placeholder="Test Code" value=": Error Identification, Grammar Coorection, dst">
+                    <input disabled style="background-color: white; border: none;" type="text" name="testcode" class="form-control" id="testcode" placeholder="Test Code" value="Error Identification, Grammar Coorection, dst">
                 </td>
             </tr>
             <tr>
-                <td>Date</td>
+                <td>Date :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": Sunday, Aug 15 2022">
+                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="Sunday, Aug 15 2022">
                 </td>
             </tr>
             <tr>
-                <td>Start Time</td>
+                <td>Start Time :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": 9:30 AM">
+                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="9:30 AM">
                 </td>
             </tr>
             <tr>
-                <td>End Time</td>
+                <td>End Time :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": 10:30 AM">
+                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="10:30 AM">
                 </td>
             </tr>
         </table>

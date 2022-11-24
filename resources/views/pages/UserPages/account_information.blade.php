@@ -15,11 +15,20 @@
             <input type="email" class="form-control" disabled value="lorem@mail.com" name="email">
         </div>
     </div>
-    <nav class="nav fixed-bottom p-5 pt-4 pb-4" style="box-shadow: 0px 0px 10px 3px rgb(0,0,0,0.10)">
+    <nav class="nav bg-light fixed-bottom p-5 pt-4 pb-4" style="box-shadow: 0px 0px 10px 3px rgb(0,0,0,0.10)">
         <div class="container ms-auto">
-            <a href="/upgrade-account/plan-option" class="nav-link">
-                <button class="btn bg-color-primary text-white ps-5 pe-5" style="float: right;">Next</button>
-            </a>
+            <div class="row">
+                <div class="col-6">
+                    <a href="/upgrade-account">
+                        <button class="btn bg-color-secondary ps-5 pe-5 text-white">Back</button>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="/upgrade-account/plan-option">
+                        <button class="btn bg-color-secondary text-white ps-5 pe-5" style="float: right;">Next</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 </div>

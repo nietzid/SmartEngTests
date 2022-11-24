@@ -40,4 +40,9 @@ class UserController extends Controller
     {
         return view('pages/UserPages/payment');
     }
+
+    public function success_upgrade()
+    {
+        return view('pages/UserPages/success_upgrade');
+    }
 }

@@ -14,39 +14,39 @@
     <form method="post" action="">
         <table class="table table-borderless">
             <tr>
-                <td width="15%">Test Name</td>
+                <td width="15%">Test Name :</td>
                 <td>
-                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$title}}">
+                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$title}}">
                 </td>
             </tr>
             <tr>
-                <td>Date</td>
+                <td>Date :</td>
                 <td>
-                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$date}}">
+                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$date}}">
                 </td>
             </tr>
             <tr>
-                <td>Start Time</td>
+                <td>Start Time :</td>
                 <td>
-                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$start_time}} ">
+                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$start_time}} ">
                 </td>
             </tr>
             <tr>
-                <td>End Time</td>
+                <td>End Time :</td>
                 <td>
-                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$end_time}}">
+                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$end_time}}">
                 </td>
             </tr>
             <tr>
-                <td>Code</td>
+                <td>Code :</td>
                 <td>
-                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$code}}">
+                    <input disabled style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$code}}">
                 </td>
             </tr>
             <tr>
-                <td>Password</td>
+                <td>Password :</td>
                 <td>
-                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value=": {{$password}}">
+                    <input style="background-color: white; border: none;" type="text" name="name" class="form-control" id="name" placeholder="Input Name" value="{{$password}}">
                 </td>
             </tr>
         </table>
