@@ -99,10 +99,13 @@ class CbtController extends Controller
     public function detailSelectQuestionTest($id ,$question_type)
     {
         $questionModel = new QuestionBank();
+        $testQuestionModel = new TestQuestion();
         $questions = $questionModel::select('*')->where('user_id', Auth::id())->where('category', $question_type)->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
+        $insertedQuestion = $testQuestionModel->where('test_id', $id)->pluck('question_id');
+        $question = $questions->whereNotIn('id',$insertedQuestion);
         return view('pages/CBT/detail_select_question', [
             'id' => $id,
-            'questions' => $questions,
+            'questions' => $question,
             'question_type' => $question_type,
         ]);
     }
