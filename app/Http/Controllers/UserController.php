@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function profile()
+    public function about()
     {
-        return view('pages/User/profile');
+        return view('pages/UserPages/about');
     }
 
     public function upgrade_account()

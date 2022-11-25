@@ -101,6 +101,8 @@ Route::get('/demo/preview-passage', [App\Http\Controllers\UserController::class,
 
 Route::get('/demo/result', [App\Http\Controllers\UserController::class, 'demo_generate_result']);
 
+Route::get('/about', [App\Http\Controllers\UserController::class, 'about']);
+
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Route::get('/generate', [GenerateController::class, 'generate'])->name('generate');
