@@ -99,5 +99,5 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Route::get('/generate', [GenerateController::class, 'generate'])->name('generate');
 
-Route::get('/scrapping', [GenerateController::class, 'scrapping'])->name('generate');
+Route::get('/scrapping', [GenerateController::class, 'scrapping'])->name('scrape');
 

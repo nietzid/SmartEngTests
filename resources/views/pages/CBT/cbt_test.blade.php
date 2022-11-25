@@ -16,22 +16,25 @@
             <br>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="A" />
-                {{$question->answer}} 
+                {{$question->option_1}} 
                 <label class="form-check-label">
                 </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="B" />
+                {{$question->option_2}} 
                 <label class="form-check-label">
                 </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="C" />
+                {{$question->option_3}} 
                 <label class="form-check-label">
                 </label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="option" value="D" />
+                {{$question->option_4}} 
                 <label class="form-check-label">
                 </label>
             </div>
@@ -41,7 +44,7 @@
                     $total_question = $questions->count();
                     if($id!=$total_question){
                 ?>
-                <a href="#"> //TODO
+                <a href="<?php echo $id+1?>">
                 <button class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
                     Next
                 </button>
@@ -50,7 +53,7 @@
                     }
                     else{
                 ?>
-                <a href="<?php echo $id+1 ?>">
+                <a href="#">
                 <button class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
                     Submit
                 </button>
@@ -77,9 +80,9 @@
     </div>
 </div>
 <script>
-    const langs = {{ Js::from(Language::all()) }};
+    var question = {{ Js::from($question) }};
     // Set the date we're counting down to
-    var countDownDate = new Date(question", 2022 17:00:00").getTime();
+    var countDownDate = new Date(question->date +"," + question->end_time).getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {

@@ -9,7 +9,8 @@
         Summary questions ask about the passage as a whole. They ask you to summarize the main ideas. Specifically, there will be three main points that you have to choose. This type of question appears at the end of almost every reading passage.
     </p>
     <div class="row pt-3">
-        <form action="" method="post">
+        {{ Form::open(array('url' => 'scrapping', 'method' => 'POST')) }}
+            @csrf
             <div class="p-2 pb-1">
                 <label for="option" class="form-label fw-bold text-color-primary">Input Method</label>
                 <select class="form-select" aria-label="option" id="option_form" name="option_form" onchange="showDiv(this)">
@@ -18,21 +19,20 @@
                 </select>
             </div>
             <div class="mt-3">
-                <label for="exampleFormControlInput1" class="form-label fw-bold text-color-primary">Title Passage</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
+                <label for="title" class="form-label fw-bold text-color-primary">Title Passage</label>
+                <?php Form::text('username');?>
+                <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="mt-3" id="hidden_link" style="display:block;">
-                <label for="exampleFormControlInput1" class="form-label fw-bold text-color-primary">Input Link</label>
-                <input type="text" class="form-control">
+                <label for="article" class="form-label fw-bold text-color-primary">Input Link</label>
+                <input type="text" class="form-control" name="link">
             </div>
             <div class="mt-3" id="hidden_file" style="display:none;">
                 <label for="exampleFormControlInput1" class="form-label fw-bold text-color-primary">Input File</label>
                 <input class="form-control" type="file" id="formFile">
             </div>
-            <!-- <a href="/generate/preview-passage"> -->
             <button type="submit" name="submit" class="btn bg-color-primary text-white float-end ps-5 pe-5 mt-5">Generate</button>
-            <!-- </a> -->
-        </form>
+        {{ Form::close() }}
     </div>
 
     <script type="text/javascript">
