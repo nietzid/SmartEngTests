@@ -52,12 +52,12 @@
                                 <iconify-icon icon="carbon:user-avatar-filled-alt" style="font-size: 20px;"></iconify-icon>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
+                                <!-- <li>
                                     <a class="dropdown-item" href="/profile">
                                         <iconify-icon icon="carbon:user"></iconify-icon>
                                         Profile
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <iconify-icon icon="carbon:logout"></iconify-icon>

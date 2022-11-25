@@ -3,11 +3,49 @@
 @section('content')
 <div class="container mt-4">
     <div class="row p-5 pb-5">
-        <h4 class="text-center" style="color: #CA6035"><b>Plan Option</b></h4>
+        <h3 class="text-center text-color-primary"><b>Plan Option</b></h3>
+    </div>
+    <div class="Timeline pb-4 mb-5 flex">
+        <div class="event1">
+            <svg height="30" width="120">
+                <circle cx="60" cy="12" r="7" fill="#CA6035" />
+            </svg>
+            <div class="timeline-text">Account information</div>
+        </div>
+        <svg height="5" width="200">
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:#CA6035; stroke-width:15" />
+        </svg>
+
+        <div class="event1">
+            <svg height="30" width="120">
+                <circle cx="60" cy="12" r="7" fill="#CA6035" />
+            </svg>
+            <div class="timeline-text">Plan Option</div>
+        </div>
+        <svg height="5" width="200">
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:#D9D9D9; stroke-width:15" />
+        </svg>
+
+        <div class="event1">
+            <svg height="30" width="120">
+                <circle cx="60" cy="12" r="7" fill="#D9D9D9" />
+            </svg>
+            <div class="timeline-text">Checkout</div>
+        </div>
+        <svg height="5" width="200">
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:#D9D9D9; stroke-width:15" />
+        </svg>
+
+        <div class="event1">
+            <svg height="30" width="120">
+                <circle cx="60" cy="12" r="7" fill="#D9D9D9" />
+            </svg>
+            <div class="timeline-text">Finish</div>
+        </div>
     </div>
     <div class="row mb-5 pb-5">
         <div class="col-lg-6 col-sm-12">
-            <div class="card m-5">
+            <div class="card m-5 mt-0 p-4">
                 <div class="card-body">
                     <h4 class="fw-bold" style="color: #646464">
                         MONTHLY PREMIUM
