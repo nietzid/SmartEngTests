@@ -21,6 +21,21 @@ class UserController extends Controller
         return view('pages/UserPages/demo');
     }
 
+    public function demo_input_passage()
+    {
+        return view('pages/UserPages/demo_input_passage');
+    }
+
+    public function demo_preview_passage()
+    {
+        return view('pages/UserPages/demo_preview_passage');
+    }
+
+    public function demo_generate_result()
+    {
+        return view('pages/UserPages/demo_generate_result');
+    }
+
     public function user()
     {
         return view('pages/UserPages/user');

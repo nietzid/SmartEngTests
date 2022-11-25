@@ -7,7 +7,7 @@
     </div>
     <div class="row text-center">
         <div class="col-lg-4 col-md-4 col-12 mb-4">
-            <a href="/generate/input-passage" style="color: #3E6D81; text-decoration: none;">
+            <a href="/demo/input-passage" style="color: #3E6D81; text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <img src="/assets/images/error_identification.png" alt="">
@@ -20,7 +20,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-12 mb-4">
-            <a href="/generate/input-passage" style="color: #3E6D81; text-decoration: none;">
+            <a href="/demo/input-passage" style="color: #3E6D81; text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <img src="/assets/images/sentence_completion.png" alt="">
@@ -33,7 +33,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-12 mb-4">
-            <a href="/generate/input-passage" style="color: #3E6D81; text-decoration: none;">
+            <a href="/demo/input-passage" style="color: #3E6D81; text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <img src="/assets/images/vocabulary.png" alt="">
