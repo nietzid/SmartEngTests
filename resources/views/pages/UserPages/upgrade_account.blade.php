@@ -3,11 +3,11 @@
 @section('content')
 <div class="container-fluid">
     <div class="row p-4 pb-0 pt-3 text-center">
-        <h4 class="mt-5 mb-5 text-bold" style="color: #646464">
+        <h3 class="mt-5 mb-5 text-bold text-color-primary">
             <b>
                 UPGRADE YOUR ACCOUNT
             </b>
-        </h4>
+        </h3>
     </div>
 
     <div class="container mb-5">

@@ -95,6 +95,14 @@ Route::get('/upgrade-account/success-upgrade', [App\Http\Controllers\UserControl
 
 Route::get('/demo', [App\Http\Controllers\UserController::class, 'demo']);
 
+Route::get('/demo/input-passage', [App\Http\Controllers\UserController::class, 'demo_input_passage']);
+
+Route::get('/demo/preview-passage', [App\Http\Controllers\UserController::class, 'demo_preview_passage']);
+
+Route::get('/demo/result', [App\Http\Controllers\UserController::class, 'demo_generate_result']);
+
+Route::get('/about', [App\Http\Controllers\UserController::class, 'about']);
+
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Route::get('/generate', [GenerateController::class, 'generate'])->name('generate');

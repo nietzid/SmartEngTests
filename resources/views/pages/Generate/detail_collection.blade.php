@@ -53,7 +53,8 @@
                                             Passage
                                         </td>
                                         <td>
-                                            <input type="text" class="form-control W-100" value="{{$question->passages}}" />
+                                            <textarea name="" id="" rows="5" class="form-control">{{$question->passages}}</textarea>
+                                            <!-- <input type="text" class="form-control W-100" value="{{$question->passages}}" /> -->
                                         </td>
                                     </tr>
                                     <tr>
@@ -99,8 +100,8 @@
                                 </table>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-secondary">Update</button>
+                                <button type="button" class="btn bg-color-secondary text-white" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn bg-color-primary text-white">Update</button>
                             </div>
                         </div>
                     </div>
