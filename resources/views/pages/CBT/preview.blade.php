@@ -27,30 +27,21 @@
                 perferendis labore officiis reprehenderit officia
                 quas dolore minus, saepe repudiandae laudantium
                 aliquam temporibus, inventore maxime?
+                eveniet laborum. Rerum in perferendis labore
+                officiis reprehenderit officia quas dolore minus,
+                saepe repudiandae laudantium aliquam temporibus,
+                inventore maxime? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Cumque repellendus
+                consequatur eveniet laborum. Rerum in perferendis
+                labore officiis reprehenderit officia quas dolore
+                minus, saepe repudiandae laudantium aliquam
+                temporibus, inventore maxime? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Cumque
+                repellendus consequatur eveniet laborum. Rerum in
+                perferendis labore officiis reprehenderit officia
+                quas dolore minus, saepe repudiandae laudantium
+                aliquam temporibus, inventore maxime?
             </p>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="option" value="A" />
-                <label class="form-check-label"> Option </label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="option" value="B" />
-                <label class="form-check-label"> Option </label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="option" value="C" />
-                <label class="form-check-label"> Option </label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="option" value="D" />
-                <label class="form-check-label"> Option </label>
-            </div>
-            <div class="row mt-3" style="float: right">
-                <a href="<?= url('cbt/test-result'); ?>">
-                    <button class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
-                        Next
-                    </button>
-                </a>
-            </div>
         </div>
         <div class="col-lg col-md col p-4" style="background-color: white;text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
             <!-- <div class="row row-cols-5 gap-3" style="text-align: center;">
@@ -61,11 +52,46 @@
             ?>
             <div class="row row-cols-5 gap-3" style="text-align: center;">
                 <?php for ($x = 1; $x <= $total_question; $x++) { ?>
-                    <a style="background-color: lightgray;" class="page-link" href="?question=<?php echo $x ?>">
+                    <a style="background-color: lightgray;" class="page-link py-2 rounded shadow-sm" href="?question=<?php echo $x ?>">
                         <?php echo $x; ?>
                     </a>
                 <?php } ?>
             </div>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="p-4" style="text-align: justify; box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.35);">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Cumque repellendus consequatur eveniet
+                laborum. Rerum in perferendis labore officiis
+                reprehenderit officia quas dolore minus?
+            </p>
+            <form action="" method="post">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="A" />
+                    <label class="form-check-label"> Option </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="B" />
+                    <label class="form-check-label"> Option </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="C" />
+                    <label class="form-check-label"> Option </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="option" value="D" />
+                    <label class="form-check-label"> Option </label>
+                </div>
+                <div class="row mt-3" style="float: right">
+                    <a href="<?= url('cbt/test-result'); ?>">
+                        <button type="submit" class="btn" style="background-color: #3e6d81; width: 150px; color: white;">
+                            Next
+                        </button>
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
 </div>

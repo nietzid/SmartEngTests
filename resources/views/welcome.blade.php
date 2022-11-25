@@ -158,18 +158,18 @@
         <div class="col-lg-8 col-md-8 col-sm-12 p-5">
             <div class="row pb-2 pt-3">
                 <div class=" col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="user_guide" style="text-decoration: none; color: black; font-size: 14px">About SmartEngTest</a> <br><br>
-                    <a href="index.php" style="text-decoration: none; color: black; font-size: 14px">Upgrade Account</a> <br><br>
-                    <a href="user_guide" style="text-decoration: none; color: black; font-size: 14px">User Guide</a> <br><br>
+                    <a href="/about" style="text-decoration: none; color: black; font-size: 14px">About SmartEngTest</a> <br><br>
+                    <a href="/upgrade-account" style="text-decoration: none; color: black; font-size: 14px">Upgrade Account</a> <br><br>
+                    <a href="/user-guide" style="text-decoration: none; color: black; font-size: 14px">User Guide</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Computer Based Test</a> <br><br>
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Generate Question</a> <br><br>
-                    <a href="user_guide" style="text-decoration: none; color: black; font-size: 14px">Demo</a> <br><br>
+                    <a href="/cbt" style="text-decoration: none; color: black; font-size: 14px">Computer Based Test</a> <br><br>
+                    <a href="/generate" style="text-decoration: none; color: black; font-size: 14px">Generate Question</a> <br><br>
+                    <a href="/demo" style="text-decoration: none; color: black; font-size: 14px">Demo</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="#about" style="text-decoration: none; color: black; font-size: 14px">Question Collection</a> <br><br>
-                    <a href="#faq" style="text-decoration: none; color: black; font-size: 14px">Test Collection</a> <br><br>
+                    <a href="/question-collection" style="text-decoration: none; color: black; font-size: 14px">Question Collection</a> <br><br>
+                    <a href="/cbt/cbt-dashboard" style="text-decoration: none; color: black; font-size: 14px">Test Collection</a> <br><br>
                 </div>
             </div>
         </div>
