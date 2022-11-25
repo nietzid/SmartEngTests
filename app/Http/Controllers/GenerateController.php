@@ -15,16 +15,15 @@ class GenerateController extends Controller
 
     public function scrapping(Request $request){
         $client = new Client(); 
-        $url = "http://192.168.0.109:5000/scrape";
-
+        $url = "https://article-scrape-api.herokuapp.com/scrape";
         $response = $client->request('POST', $url, [
             'form_params' => [
-                'newsTitle' => $request->title,
-                'newsLink'  => $request->article,
+                'newsTitle' => $request->title, 
+                'newsLink'  => $request->link,
                 ],
             ]);
         $responseBody = json_decode($response->getBody());
-        return redirect()->route('preview_passage', ['reponse' => $responseBody ]);
+        return redirect('/generate/preview-passage')->with(['reponse' => $responseBody ]);
     }
 
     public function input_passage()
