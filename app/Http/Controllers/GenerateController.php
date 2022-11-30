@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TestPassages;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -31,6 +32,27 @@ class GenerateController extends Controller
         return view('pages/Generate/input_passage');
     }
 
+    public function store_passage()
+    {
+        // $testPassage = new TestPassages();
+        // $testPassage->passages = $request->passage;
+        // $testPassage->save();
+        // $client = new Client(); 
+        // $url = "https://set-vocab.herokuapp.com/generate";
+        // $response = $client->request('POST', $url, [
+        //     'form_params' => [
+        //         'max' => '10' , 
+        //         'fileTitle'  => $request->title,
+        //         'fileText'  => $request->passage,
+        //         ],
+        //     ]);
+        // $responseBody = json_decode($response->getBody());
+        // return redirect('/generate/result')->with($responseBody);
+        // return redirect('/generate/result');
+        return view('pages/Generate/generate');
+
+    }
+
     public function preview_passage()
     {
         return view('pages/Generate/preview_passage');
@@ -38,6 +60,7 @@ class GenerateController extends Controller
 
     public function generate_result()
     {
+        
         return view('pages/Generate/generate_result');
     }
 }

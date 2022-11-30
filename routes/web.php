@@ -81,6 +81,8 @@ Route::get('/generate/input-passage', [App\Http\Controllers\GenerateController::
 
 Route::get('/generate/preview-passage', [App\Http\Controllers\GenerateController::class, 'preview_passage']);
 
+Route::get('/generate/store-passage', [App\Http\Controllers\GenerateController::class, 'store_passage']);
+
 Route::get('/generate/result', [App\Http\Controllers\GenerateController::class, 'generate_result']);
 
 Route::get('/upgrade-account', [App\Http\Controllers\UserController::class, 'upgrade_account']);
