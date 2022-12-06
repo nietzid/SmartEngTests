@@ -32,24 +32,26 @@ class GenerateController extends Controller
         return view('pages/Generate/input_passage');
     }
 
-    public function store_passage()
+    public function store_passage(Request $request)
     {
         // $testPassage = new TestPassages();
         // $testPassage->passages = $request->passage;
         // $testPassage->save();
-        // $client = new Client(); 
-        // $url = "https://set-vocab.herokuapp.com/generate";
-        // $response = $client->request('POST', $url, [
-        //     'form_params' => [
-        //         'max' => '10' , 
-        //         'fileTitle'  => $request->title,
-        //         'fileText'  => $request->passage,
-        //         ],
-        //     ]);
-        // $responseBody = json_decode($response->getBody());
-        // return redirect('/generate/result')->with($responseBody);
+        // dd($request->passage); 
+        $client = new Client(); 
+        $url = "https://set-vocab.herokuapp.com/generate";
+        $response = $client->request('POST', $url, [
+            'form_params' => [
+                'max' => '10' , 
+                'fileTitle' => 'abc',
+                'fileText' => $request->passage,
+                ],
+            ]);
+        $responseBody = json_decode($response->getBody());
+        dd($responseBody); 
+        //return redirect('/generate/result')->with($responseBody);
         // return redirect('/generate/result');
-        return view('pages/Generate/generate');
+        // return view('pages/Generate/generate');
 
     }
 
