@@ -5,22 +5,21 @@
     <div class="container-fluid pb-5">
         <div class="row p-5">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 flex">
-                <img src="assets/images/header-img.png" width="60%" alt="">
+                <img src="assets/images/header-img.png" width="65%" alt="">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-12" style="display: flex; align-items: center">
                 <div class="wrap">
                     <div class="row" style="color: white;">
                         <br><br>
-                        <h1 style="font-size: 50px;"><b>Smart EngTest</b></h1>
-                        <p>Smart EngTest is a website that can generate English test questions <br> only from an article or text saved in .txt format. Smart EngTest also <br> provides CBT services to facilitate the English exam process</p>
+                        <h1 class="welcome-text"><b>Smart EngTest</b></h1>
+                        <p class="paragraph-responsive">Smart EngTest is a website that can generate English test questions only from an article or text saved in .txt format. Smart EngTest also provides CBT services to facilitate the English exam process</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
-
+<div class="container hidden-items">
     <section>
         <div class="swiper mySwiper container">
             <div class="swiper-wrapper content">
@@ -72,14 +71,14 @@
     </section>
 </div>
 
-<div style="margin-top: 10%; margin-bottom: 10%">
+<div style="margin-bottom: 3%">
     <div class="container pt-5 pb-5">
         <h1 class="text-center pt-5">
             <b style="color: #3E6D81">
                 ESL <span style="color: #CA6035;">TEST</span>
             </b>
         </h1>
-        <p class="text-center pt-4 pb-4">
+        <p class="text-center pt-4 pb-4 paragraph-responsive">
             <i>
                 “ The English as a second language (ESL) test plays an important role as it is often used to make important decisions such as admission to universities. Some examples of ESL Tests that are widely used are Cambridge Certificate Exams, International English Language Testing System (IELTS), and Test of English as a Foreign Language (TOEFL). “
             </i>
@@ -87,41 +86,41 @@
     </div>
 </div>
 
-<div class="box p-5" style="background-color: #F1F1F1;">
-    <h1 class="text-center">
+<div class="box p-3 pt-5 pb-5" style="background-color: #F1F1F1;">
+    <h1 class="text-center pt-2">
         <b style="color: #CA6035;">
             Our Feature
         </b>
     </h1>
     <div class="container mx-auto">
-        <div class="row pt-5 d-flex justify-content-center align-items-center">
+        <div class="row pt-5 d-flex justify-content-center align-items-center reverse">
             <div class="col-lg-7 col-md-7 col-sm-12 col-12">
-                <p style="color: #CA6035; font-size:x-large;">Generate Question</p>
-                <p>
-                    Question Generation aims to generate valid and fluent questions according to <br>
-                    the given passage and targeted answers from several sentences or texts entered. <br>
-                    Questions can be used in many scenarios, such as automated tutoring systems, <br>
-                    improving the performance of the Question Answerer model, enabling chatbots <br>
+                <p class="text-color-secondary heading-size">Generate Question</p>
+                <p class="paragraph-responsive" style="text-align: justify;">
+                    Question Generation aims to generate valid and fluent questions according to
+                    the given passage and targeted answers from several sentences or texts entered.
+                    Questions can be used in many scenarios, such as automated tutoring systems,
+                    improving the performance of the Question Answerer model, enabling chatbots
                     to lead conversations, and generating test questions.
                 </p>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <img src="assets/images/generate.png" class="flex" width="100%" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 m-2">
+                <img src="assets/images/generate.png" class="flex img-responsive" alt="">
             </div>
         </div>
         <div class="row pt-5 mt-5 row pt-5 d-flex justify-content-center align">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <img src="assets/images/cbt.png" class="flex" width="100%" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 m-2">
+                <img src="assets/images/cbt.png" class="flex img-responsive" alt="">
             </div>
-            <div class="col-lg-7 col-md-6 col-sm-12 col-12 ps-5">
-                <p style="color: #CA6035; font-size:x-large;">Computer Based Test</p>
-                <p>
-                    CBT or Computer Based Test is a test with an implementation system using a<br>
-                    computer as a medium for conducting tests. The presentation and selection <br>
-                    of Computer CBT questions is done computerized so that each participant <br>
-                    who takes the test gets a different package of questions. The CBT system <br>
-                    will reduce implementation costs because of course there is no need to print <br>
-                    questions and answer sheets with paper, distribute questions, and reduce the <br>
+            <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+                <p class="text-color-secondary heading-size">Computer Based Test</p>
+                <p class="paragraph-responsive" style="text-align: justify;">
+                    CBT or Computer Based Test is a test with an implementation system using a
+                    computer as a medium for conducting tests. The presentation and selection
+                    of Computer CBT questions is done computerized so that each participant
+                    who takes the test gets a different package of questions. The CBT system
+                    will reduce implementation costs because of course there is no need to print
+                    questions and answer sheets with paper, distribute questions, and reduce the
                     cost of correcting exam results by scanning LJK and scoring which takes longer.
                 </p>
             </div>
@@ -130,23 +129,23 @@
 </div>
 <div class="container" style="padding-top: 10%; padding-bottom: 10%;">
     <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col ps-5">
-                    <h1 style="color: #CA6035;" class="pt-5">
+        <div class="card-body p-5">
+            <div class="row reverse">
+                <div class="col-lg-7 col-sm-12">
+                    <h1 style="color: #CA6035;" class="pt-5 heading-responsive">
                         <b>
                             Upgrade to premium
                         </b>
                     </h1>
-                    <p>
+                    <p class="paragraph-responsive">
                         Get the most out of SmartEngTest now!
                     </p>
-                    <a href="<?= url('upgrade-account') ?>">
-                        <button class="btn mt-2" style="background-color: #3E6D81; color: white; width: 30%">Upgrade Account</button>
+                    <a href="<?= url('upgrade-account') ?>" class="centered-button">
+                        <button class="btn mt-2" style="background-color: #3E6D81; color: white;">Upgrade Account</button>
                     </a>
                 </div>
-                <div class="col d-flex justify-content-center">
-                    <img src="assets/images/saly-1.png" width="50%" alt="">
+                <div class="col-lg-5 col-sm-12 d-flex justify-content-center">
+                    <img src="assets/images/saly-1.png" width="70%" alt="">
                 </div>
             </div>
         </div>
@@ -155,25 +154,25 @@
 
 <div class="foooter" style="background-color: #F1F1F1;">
     <div class="row m-5 mb-0 mt-3">
-        <div class="col-lg-8 col-md-8 col-sm-12 p-5">
+        <div class="col-lg-8 col-md-8 col-sm-12 footer-padding" style="text-align: left;">
             <div class="row pb-2 pt-3">
                 <div class=" col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="/about" style="text-decoration: none; color: black; font-size: 14px">About SmartEngTest</a> <br><br>
-                    <a href="/upgrade-account" style="text-decoration: none; color: black; font-size: 14px">Upgrade Account</a> <br><br>
-                    <a href="/user-guide" style="text-decoration: none; color: black; font-size: 14px">User Guide</a> <br><br>
+                    <a href="/about">About SmartEngTest</a> <br><br>
+                    <a href="/upgrade-account">Upgrade Account</a> <br><br>
+                    <a href="/user-guide">User Guide</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="/cbt" style="text-decoration: none; color: black; font-size: 14px">Computer Based Test</a> <br><br>
-                    <a href="/generate" style="text-decoration: none; color: black; font-size: 14px">Generate Question</a> <br><br>
-                    <a href="/demo" style="text-decoration: none; color: black; font-size: 14px">Demo</a> <br><br>
+                    <a href="/cbt">Computer Based Test</a> <br><br>
+                    <a href="/generate">Generate Question</a> <br><br>
+                    <a href="/demo">Demo</a> <br><br>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                    <a href="/question-collection" style="text-decoration: none; color: black; font-size: 14px">Question Collection</a> <br><br>
-                    <a href="/cbt/cbt-dashboard" style="text-decoration: none; color: black; font-size: 14px">Test Collection</a> <br><br>
+                    <a href="/question-collection">Question Collection</a> <br><br>
+                    <a href="/cbt/cbt-dashboard">Test Collection</a> <br><br>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 p-5" style="display: flex; align-items: center">
+        <div class="col-lg-4 col-md-4 col-sm-12 p-5 hidden-items">
             <img src="{{ asset('assets/images/logo-light.png')}}" width="70%" alt="">
         </div>
     </div>

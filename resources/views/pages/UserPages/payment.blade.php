@@ -48,56 +48,47 @@
         </div>
     </div>
     <div class="row mb-5 pb-5">
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-4 col-sm-12">
             <div class="card p-4 ps-0">
                 <div class="card-body">
                     <div class="form-check mb-3">
                         <label class="form-check-label">
-                            <img src="/assets/images/ovo.png" alt="" style="width: 25px;"> OVO
+                            <img src="/assets/images/bca.png" alt="" style="width: 50px;">
                         </label>
-                        <input class="form-check-input float-end" type="radio" name="payment">
+                        <input name="type" class="form-check-input float-end" type="radio" id="payment" value="payment" style="vertical-align:middle; cursor: pointer;">
                     </div>
-                    <div class="form-check mb-3">
+                    <div class="form-check">
                         <label class="form-check-label">
-                            <img src="/assets/images/paypal.png" alt="" style="width: 25px;"> Paypal
+                            <img src="/assets/images/qris.png" alt="" style="width: 50px;">
                         </label>
-                        <input class="form-check-input float-end" type="radio" name="payment">
-                    </div>
-                    <div class="form-check mb-3">
-                        <label class="form-check-label">
-                            <img src="/assets/images/credit.png" alt="" style="width: 25px;"> Credit Card
-                        </label>
-                        <input class="form-check-input float-end" type="radio" name="payment" checked>
-                    </div>
-                    <div class="form-check mb-3">
-                        <label class="form-check-label">
-                            <img src="/assets/images/ovo.png" alt="" style="width: 25px;"> OVO
-                        </label>
-                        <input class="form-check-input float-end" type="radio" name="payment">
-                    </div>
-                    <div class="form-check mb-3">
-                        <label class="form-check-label">
-                            <img src="/assets/images/paypal.png" alt="" style="width: 25px;"> Paypal
-                        </label>
-                        <input class="form-check-input float-end" type="radio" name="payment">
+                        <input name="type" class="form-check-input float-end" type="radio" id="payment2" value="payment2" style="vertical-align:middle; cursor: pointer;">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
-            <div class="row">
-                <div class="card pb-4">
-                    <div class="mt-3">
-                        <label class="form-label fw-bold text-color-primary">Name</label>
-                        <input type="text" class="form-control" name="name">
-                    </div>
-                    <div class="mt-3">
-                        <label class="form-label fw-bold text-color-primary">Address</label>
-                        <input type="text" class="form-control" name="address">
-                    </div>
-                    <div class="mt-3">
-                        <label class="form-label fw-bold text-color-primary">Name On Card</label>
-                        <input type="text" class="form-control" name="credit">
+        <div class="col-lg-8 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group p-2 pb-1" id="payment1_select" style="display: none;">
+                            <h5>
+                                Transfer to this account:
+                            </h5>
+                            <p class="pt-2">
+                                <strong>BCA</strong> 1234567890 a/n Smart EngTest <br>
+                                <span class="text-danger">
+                                    Please add note with your name and email for verification when you transfer.
+                                </span>
+                            </p>
+                        </div>
+                        <div class="form-group" id="payment2_select" style="display: none;">
+                            <img src="/assets/images/qr.png" alt="" style="width: 200px;">
+                        </div>
+                        <div class="form-group pb-5 pt-3 ps-3" id="payment3_select">
+                            <p class="pb-2">
+                                Choose Payment.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +103,7 @@
                     </a>
                 </div>
                 <div class="col-6">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn bg-color-secondary text-white ps-5 pe-5" style="float: right;">Submit</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn bg-color-secondary text-white ps-3 pe-3" style="float: right;">Request Upgrade Account</button>
                 </div>
             </div>
         </div>
@@ -128,7 +119,7 @@
             <div class="modal-body">
                 <div class="row">
                     <p>
-                        Are you sure you want to buy this package?
+                        Are you sure to request upgrade account?
                     </p>
                 </div>
 
@@ -146,7 +137,7 @@
                         Account
                     </b>
                     <p>
-                        Youremail@mail.com
+                        {{ Auth::user()->email }}
                     </p>
                 </div>
 
@@ -158,10 +149,17 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn text-white bg-color-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="/upgrade-account/success-upgrade">
-                    <button type="submit" class="btn text-white bg-color-primary">Save changes</button>
-                </a>
+                <form action="/upgrade-account/store-payment" method="post">
+                    @csrf
+                    <input hidden name="user_id" value="{{ Auth::user()->id }}">
+                    <!-- <input hidden name="upgrade_request" value="request"> -->
+                    <button type="button" class="btn text-white bg-color-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn text-white bg-color-primary">
+                        Submit
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -173,5 +171,26 @@
     myModal.addEventListener('shown.bs.modal', function() {
         myInput.focus()
     })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("input[name=type]").change(function() {
+
+            if ($("#payment").is(':checked')) {
+                $("#payment1_select").show();
+                $("#payment2_select").hide();
+                $("#payment3_select").hide();
+            } else if ($("#payment2").is(':checked')) {
+                $("#payment1_select").hide();
+                $("#payment2_select").show();
+                $("#payment3_select").hide();
+            } else {
+                $("#payment1_select").hide();
+                $("#payment2_select").hide();
+                $("#payment3_select").show();
+            }
+        });
+    });
 </script>
 @endsection

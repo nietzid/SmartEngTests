@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-color-primary shadow-sm fixed-top">
-            <div class="container">
+            <div class="container ps-3 pe-3">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     <img src="{{ asset('assets/images/logo-dark.png') }}" alt="logo-image" width="70%">
                 </a>
@@ -34,41 +34,52 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                            <a class="nav-link me-5 active" aria-current="page" href="/">Home</a>
+                        </li>
+                        @if (Auth::guest())
+                        <li class="nav-item">
+                            <a class="nav-link me-5" href="/demo">Demo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/question-collection">Question Collection</a>
+                            <a class="nav-link me-5" href="/cbt">CBT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/generate">Generate</a>
+                            <a href="/login" class="btn bg-light p-1 ps-3 pe-3 mt-1 text-color-primary fw-bold" style="border-radius: 20px;">
+                                Sign In
+                            </a>
+                        </li>
+                        @elseif (Auth::user())
+                        <li class="nav-item">
+                            <a class="nav-link me-5" href="/question-collection">Question Collection</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cbt">CBT</a>
+                            <a class="nav-link me-5" href="/generate">Generate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-5" href="/cbt">CBT</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <iconify-icon icon="carbon:user-avatar-filled-alt" style="font-size: 20px;"></iconify-icon>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!-- <li>
+                                <li>
                                     <a class="dropdown-item" href="/profile">
                                         <iconify-icon icon="carbon:user"></iconify-icon>
                                         Profile
                                     </a>
-                                </li> -->
+                                </li>
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        <iconify-icon icon="carbon:logout"></iconify-icon>
+                                    <a class="dropdown-item" href="/logout">
+                                        <iconify-icon inline icon="carbon:logout"></iconify-icon>
                                         Logout
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,7 @@
-@extends ('layouts.admin')
+@extends('layouts.admin-navbar')
 
-@section ('content')
-hello
+@section('content')
+<div>
+    hello
+</div>
 @endsection

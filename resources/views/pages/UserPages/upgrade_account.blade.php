@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
+    @if (Auth::user()->is_premium == 0)
     <div class="row p-4 pb-0 pt-3 text-center">
         <h3 class="mt-5 mb-5 text-bold text-color-primary">
             <b>
@@ -99,5 +100,31 @@
             </div>
         </div>
     </div>
+    @elseif (Auth::user()->is_premium == 1)
+    <div class="container mt-5 pt-5">
+        <div class="card">
+            <div class="card-body p-5">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12">
+                        <img src="assets/images/error-404.png" width="70%" alt="">
+                    </div>
+                    <div class="col-lg-7 col-sm-12 mt-3">
+                        <h1 style="color: #CA6035;" class="pt-5 heading-responsive">
+                            <b>
+                                Your account is premium.
+                            </b>
+                        </h1>
+                        <p class="paragraph-responsive">
+                            You can upgrade again when your premium account is expired.
+                        </p>
+                        <a href="/" class="centered-button">
+                            <button class="btn mt-2 px-4" style="background-color: #3E6D81; color: white;">Back To Home</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
 </div>
 @endsection

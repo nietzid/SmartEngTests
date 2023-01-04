@@ -1,21 +1,19 @@
 @extends('layouts.logged-navbar')
 
 @section('content')
-<div class="container">
+<div class="container p-4 pt-1">
     <div style="color: #CA6035;" class="row pb-0 pt-5">
         <h3>
             <b>
                 Question Collection
             </b>
         </h3>
-        <p style="color: black;">
+        <p style="color: black; text-align: justify;" class="paragraph-responsive">
             Below is your question collection. You can add the question that’s been generated to the test.
         </p>
-        <div class="mb-2">
-            <a href="/generate/add-question-manual">
-                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-4 pe-4" style="background-color: #3E6D81; float: right;">Add Manual Question</button>
-            </a>
-        </div>
+        <a href="/generate/add-question-manual">
+            <button type="button" name="submit" class="btn btn-sm btn-block text-light mt-4 ps-4 pe-4" style="background-color: #3E6D81; float: right;">Add Manual Question</button>
+        </a>
     </div>
 
     <div class="row text-center mt-3">

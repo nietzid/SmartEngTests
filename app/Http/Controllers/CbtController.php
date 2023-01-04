@@ -31,7 +31,7 @@ class CbtController extends Controller
         $questionId = $testQuestion->where('test_id', $testId->id)->pluck('question_id');
         $question = $questionBank->select('*')->whereIn('question_banks.id', $questionId);
         $questions = $question->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
-        return view('pages/CBT/cbt_test', ['questions' => $questions,'id' => $id]);
+        return view('pages/CBT/cbt_test', ['questions' => $questions, 'id' => $id]);
     }
 
     public function testLandingPage()
@@ -96,13 +96,13 @@ class CbtController extends Controller
         ]);
     }
 
-    public function detailSelectQuestionTest($id ,$question_type)
+    public function detailSelectQuestionTest($id, $question_type)
     {
         $questionModel = new QuestionBank();
         $testQuestionModel = new TestQuestion();
         $questions = $questionModel::select('*')->where('user_id', Auth::id())->where('category', $question_type)->join('passages', 'question_banks.passage_id', '=', 'passages.id')->get();
         $insertedQuestion = $testQuestionModel->where('test_id', $id)->pluck('question_id');
-        $question = $questions->whereNotIn('id',$insertedQuestion);
+        $question = $questions->whereNotIn('id', $insertedQuestion);
         return view('pages/CBT/detail_select_question', [
             'id' => $id,
             'questions' => $question,
@@ -115,7 +115,8 @@ class CbtController extends Controller
         return view('pages/CBT/preview');
     }
 
-    public function generateUniqueCode(){
+    public function generateUniqueCode()
+    {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersNumber = strlen($characters);
         $codeLength = 6;
@@ -123,7 +124,7 @@ class CbtController extends Controller
         while (strlen($code) < $codeLength) {
             $position = rand(0, $charactersNumber - 1);
             $character = $characters[$position];
-            $code = $code.$character;
+            $code = $code . $character;
         }
 
         if (TestCollection::where('code', $code)->exists()) {
@@ -131,5 +132,8 @@ class CbtController extends Controller
         }
         return $code;
     }
-
+    public function resultTest()
+    {
+        return view('pages/CBT/cbt_result');
+    }
 }

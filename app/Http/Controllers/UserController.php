@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PaymentRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -59,5 +61,11 @@ class UserController extends Controller
     public function success_upgrade()
     {
         return view('pages/UserPages/success_upgrade');
+    }
+
+    public function store_payment(Request $request)
+    {
+        PaymentRequest::create($request->all());
+        return redirect('/upgrade-account/success-upgrade');
     }
 }

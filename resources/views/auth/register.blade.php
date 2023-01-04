@@ -7,9 +7,14 @@
             <h1 class="text-color-primary text-center fw-bold">
                 SIGN UP
             </h1>
+            @if(Session::has('status'))
+            <div class="alert alert-success mt-3" role="alert">
+                {{Session::get('message')}}
+            </div>
+            @endif
             <form method="POST" action="{{ route('register') }}">
                 @csrf
-                <div class="row mb-3">
+                <div class="row mb-3 mt-3">
                     <label for="name">{{ __('Name') }}</label>
                     <div>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -45,19 +50,12 @@
                         @enderror
                     </div>
                 </div>
-
-                <div class="row mb-3">
-                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
-                    <div>
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-primary bg-color-primary mt-2" style="width: 100%;">
                     {{ __('Register') }}
                 </button>
             </form>
             <div class="text-center mt-3 text-color-primary">
-                Already have an account?<a href="/register"> Sign In</a>
+                Already have an account?<a href="/login"> Sign In</a>
             </div>
         </div>
     </div>

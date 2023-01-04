@@ -52,15 +52,17 @@
                 <div class="card p-5">
                     <h3 class="text-color-primary mt-5">
                         <b>
-                            Your Account Has Been Upgraded
+                            Your Payment Has Been Requested. <br> Please Wait For Confirmation
                         </b>
                     </h3>
                     <p class="text-grey">
-                        You will receive an email within 24 hours confirming the changes
+                        You will receive notification when your payment has been confirmed or rejected
                     </p>
-                    <button class="btn mt-3  mb-5 text-color-primary bg-light" style="width: fit-content; border: 1px solid #3E6D81;">
-                        Print Invoice
-                    </button>
+                    <a href="/">
+                        <button class="btn mt-3  mb-5 text-color-primary bg-light" style="width: fit-content; border: 1px solid #3E6D81;">
+                            Back to Home
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

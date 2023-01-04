@@ -7,7 +7,12 @@
             <h1 class="text-color-primary text-center fw-bold">
                 SIGN IN
             </h1>
-            <form method="POST" action="{{ route('login') }}">
+            @if(Session::has('status'))
+            <div class="alert alert-danger" role="alert">
+                {{Session::get('message')}}
+            </div>
+            @endif
+            <form method="POST" action="">
                 @csrf
                 <div class="row mb-3">
                     <label for="email">{{ __('Email Address') }}</label>

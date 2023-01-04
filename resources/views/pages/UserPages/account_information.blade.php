@@ -47,11 +47,11 @@
     <div class="row pt-3">
         <div class="mt-3">
             <label class="form-label fw-bold text-color-primary">Name</label>
-            <input type="text" class="form-control" disabled value="lorem" name="name">
+            <input type="text" class="form-control" disabled value="{{ @Auth::user()->name }}" name="name">
         </div>
         <div class="mt-3">
             <label class="form-label fw-bold text-color-primary">Email</label>
-            <input type="email" class="form-control" disabled value="lorem@mail.com" name="email">
+            <input type="email" class="form-control" disabled value="{{ @Auth::user()->email }}" name="email">
         </div>
     </div>
     <nav class="nav bg-light fixed-bottom p-5 pt-4 pb-4" style="box-shadow: 0px 0px 10px 3px rgb(0,0,0,0.10)">

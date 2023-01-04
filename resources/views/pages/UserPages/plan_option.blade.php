@@ -70,17 +70,13 @@
         </div>
         <div class="col-lg-6 col-sm-12">
             <div class="row pt-3">
-                <div class="mt-3">
-                    <label class="form-label fw-bold text-color-primary">Name</label>
-                    <input type="text" class="form-control" disabled value="lorem" name="name">
-                </div>
-                <div class="mt-3">
+                <div class="mt-5">
                     <label class="form-label fw-bold text-color-primary">Start Plan</label>
-                    <input type="date" class="form-control" disabled name="start">
+                    <input type="date" class="form-control" disabled name="start" value="{{ $date = date('Y-m-d') }}">
                 </div>
                 <div class="mt-3">
                     <label class="form-label fw-bold text-color-primary">End Plan</label>
-                    <input type="date" class="form-control" disabled name="end">
+                    <input type="date" class="form-control" disabled name="end" value="{{ date('Y-m-d', strtotime($date. ' + 1 month')) }}">
                 </div>
             </div>
         </div>

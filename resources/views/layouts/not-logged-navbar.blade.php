@@ -27,7 +27,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-color-primary shadow-sm fixed-top">
-            <div class="container">
+            <div class="container ps-3 pe-3">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="assets/images/logo-dark.png" alt="logo-image" width="70%">
                 </a>
@@ -35,15 +35,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link me-4 active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/demo">Demo</a>
+                            <a class="nav-link me-4" href="/demo">Demo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cbt">CBT</a>
+                            <a class="nav-link me-4" href="/cbt">CBT</a>
                         </li>
                         <li class="nav-item">
                             <a href="/login" class="btn bg-light p-1 ps-3 pe-3 mt-1 text-color-primary fw-bold" style="border-radius: 20px;">

@@ -3,33 +3,62 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\PaymentRequest;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+        return view('Pages/adminPages/dashboard');
     }
 
-    // public function login()
-    // {
-    //     return view('admin.login');
-    // }
+    public function user_dashboard()
+    {
+        $users = User::paginate(10);
+        return view('Pages/adminPages/user_dashboard', compact(['users']));
+    }
 
-    // public function loginAdmin(Request $request)
-    // {
-    //     $credentials = $request->only('email', 'password');
+    public function payment_request()
+    {
+        // $joinData = DB::table('users')->select('users.id', 'users.name', 'users.email', 'payment_requests.upgrade_request', 'payment_requests.created_at')->join('payment_requests', 'payment_requests.user_id', '=', 'users.id')->where(['upgrade_request' => 'request'])->get();
+        $joinData = DB::table('users')->select('users.id', 'users.name', 'users.email', 'payment_requests.upgrade_request', 'payment_requests.created_at')->join('payment_requests', 'payment_requests.user_id', '=', 'users.id')->get();
+        return view('Pages/adminPages/payment_request', compact(['joinData']));
+    }
 
-    //     if (Auth::attempt($credentials)) {
-    //         // Authentication passed...
-    //         return redirect()->intended('admin');
-    //     }
-    // }
+    public function decline_request($id)
+    {
+        $request = PaymentRequest::findOrfail($id);
+        $request->upgrade_request = 'failed';
+        $request->save();
 
-    // public function logout()
-    // {
-    //     Auth::logout();
-    //     return redirect()->route('login');
-    // }
+        // if ($request) {
+        //     Session::flash('status', 'update_success');
+        //     Session::flash('message', 'Data Updated!');
+        // }
+
+        return redirect('/payment-request');
+    }
+
+    public function accept_request($id)
+    {
+        $request = PaymentRequest::findOrfail($id);
+        $request->upgrade_request = 'success';
+        $request->save();
+
+        $user = User::findOrfail($id);
+        $user->is_premium = 1;
+        $user->generate_counter = 99999999;
+        $user->save();
+
+        // if ($request) {
+        //     Session::flash('status', 'update_success');
+        //     Session::flash('message', 'Data Updated!');
+        // }
+
+        return redirect('/payment-request');
+    }
 }

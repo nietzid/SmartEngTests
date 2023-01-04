@@ -18,12 +18,9 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::user()->role_as == '1') {
-            return redirect()->route('/home')->with('status', 'You are not admin');
+        if (Auth::user()->role_as == 0) {
+            abort(404);
         }
-        // else if (!Auth::user()->role_as == '1' && !Auth::user()->role_as == '2') {
-        //     return redirect()->route('/home')->with('status', 'You are not admin');
-        // }
         return $next($request);
     }
 }
