@@ -14,9 +14,9 @@ class GenerateController extends Controller
         return view('pages/Generate/generate');
     }
 
-    public function scrapping(Request $request){
+    public function scrape(Request $request){
         $client = new Client(); 
-        $url = "https://article-scrape-api.herokuapp.com/scrape";
+        $url = "http://api.smartengtest.com/scrape";
         $response = $client->request('POST', $url, [
             'form_params' => [
                 'newsTitle' => $request->title, 
@@ -24,7 +24,7 @@ class GenerateController extends Controller
                 ],
             ]);
         $responseBody = json_decode($response->getBody());
-        return redirect('/generate/preview-passage')->with(['reponse' => $responseBody ]);
+        return redirect('/generate/preview-passage')->with(['response' => $responseBody]);
     }
 
     public function input_passage()
@@ -34,12 +34,8 @@ class GenerateController extends Controller
 
     public function store_passage(Request $request)
     {
-        // $testPassage = new TestPassages();
-        // $testPassage->passages = $request->passage;
-        // $testPassage->save();
-        // dd($request->passage); 
         $client = new Client(); 
-        $url = "https://set-vocab.herokuapp.com/generate";
+        $url = "http://api.smartengtest.com/generate";
         $response = $client->request('POST', $url, [
             'form_params' => [
                 'max' => '10' , 
@@ -48,11 +44,8 @@ class GenerateController extends Controller
                 ],
             ]);
         $responseBody = json_decode($response->getBody());
-        dd($responseBody); 
-        //return redirect('/generate/result')->with($responseBody);
-        // return redirect('/generate/result');
-        // return view('pages/Generate/generate');
-
+        session(['passage' => $request->passage]);
+        return redirect('/generate/result')->with(['response' => $responseBody]);
     }
 
     public function preview_passage()
@@ -62,7 +55,7 @@ class GenerateController extends Controller
 
     public function generate_result()
     {
-        
+        TestPassages::get();
         return view('pages/Generate/generate_result');
     }
 }

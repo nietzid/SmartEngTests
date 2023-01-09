@@ -75,6 +75,6 @@ Route::get('/remove-question/{id}', [App\Http\Controllers\QuestionController::cl
 Route::get('/add-question-to-test/{testId}/{id}', [App\Http\Controllers\QuestionController::class, 'addQuestiontoTest'])->middleware('auth');
 Route::get('/generate/input-passage', [App\Http\Controllers\GenerateController::class, 'input_passage'])->middleware('auth');
 Route::get('/generate/preview-passage', [App\Http\Controllers\GenerateController::class, 'preview_passage'])->middleware('auth');
-Route::get('/generate/store-passage', [App\Http\Controllers\GenerateController::class, 'store_passage'])->middleware('auth');
 Route::get('/generate/result', [App\Http\Controllers\GenerateController::class, 'generate_result'])->middleware('auth');
-Route::get('/scrapping', [GenerateController::class, 'scrapping'])->name('scrape')->middleware('auth');
+Route::post('/generate/store-passage', [App\Http\Controllers\GenerateController::class, 'store_passage'])->middleware('auth');
+Route::post('/scrapping', [GenerateController::class, 'scrape'])->name('scrape')->middleware('auth');

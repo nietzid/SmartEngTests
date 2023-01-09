@@ -13,20 +13,20 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('Pages/adminPages/dashboard');
+        return view('pages/AdminPages/dashboard');
     }
 
     public function user_dashboard()
     {
         $users = User::paginate(10);
-        return view('Pages/adminPages/user_dashboard', compact(['users']));
+        return view('pages/AdminPages/user_dashboard', compact(['users']));
     }
 
     public function payment_request()
     {
         // $joinData = DB::table('users')->select('users.id', 'users.name', 'users.email', 'payment_requests.upgrade_request', 'payment_requests.created_at')->join('payment_requests', 'payment_requests.user_id', '=', 'users.id')->where(['upgrade_request' => 'request'])->get();
         $joinData = DB::table('users')->select('users.id', 'users.name', 'users.email', 'payment_requests.upgrade_request', 'payment_requests.created_at')->join('payment_requests', 'payment_requests.user_id', '=', 'users.id')->get();
-        return view('Pages/adminPages/payment_request', compact(['joinData']));
+        return view('pages/AdminPages/payment_request', compact(['joinData']));
     }
 
     public function decline_request($id)
