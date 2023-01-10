@@ -17,14 +17,15 @@
     <div class="card p-4 mt-3 shadow-md" style="color: #555555;">
         <div class="row pb-3">
             <b>
-                {{$question->passages}}
+                {{$question->passage}}
             </b>
         </div>
+        {{$question->question}}
         <div class="row ps-3">
-            A. {{$question->question}} <br>
-            B. {{$question->question}} <br>
-            C. {{$question->question}} <br>
-            D. {{$question->question}} <br>
+            A. {{$question->option1}} <br>
+            B. {{$question->option2}} <br>
+            C. {{$question->option3}} <br>
+            D. {{$question->option4}} <br>
             <b class="pt-2 ps-0">
                 Ans: {{$question->answer}}
             </b>

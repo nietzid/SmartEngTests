@@ -78,3 +78,6 @@ Route::get('/generate/preview-passage', [App\Http\Controllers\GenerateController
 Route::get('/generate/result', [App\Http\Controllers\GenerateController::class, 'generate_result'])->middleware('auth');
 Route::post('/generate/store-passage', [App\Http\Controllers\GenerateController::class, 'store_passage'])->middleware('auth');
 Route::post('/scrapping', [GenerateController::class, 'scrape'])->name('scrape')->middleware('auth');
+Route::post('/save-generate-result', [GenerateController::class, 'save_generate_result'])->name('none')->middleware('auth');
+
+

@@ -17,7 +17,8 @@ class TestPassagesFactory extends Factory
     public function definition()
     {
         return [
-            'passages' => fake()->paragraph(3),
+            'passage' => fake()->paragraph(3),
+            'title' => fake()->sentence(3),
         ];
     }
 }

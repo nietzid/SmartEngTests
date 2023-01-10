@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\QuestionBank;
 use App\Models\TestPassages;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class GenerateController extends Controller
@@ -34,18 +36,22 @@ class GenerateController extends Controller
 
     public function store_passage(Request $request)
     {
+        $passageId = TestPassages::insertGetId([
+            'title' => $request->title,
+            'passage' => $request->passage,
+        ]);
         $client = new Client(); 
         $url = "http://api.smartengtest.com/generate";
         $response = $client->request('POST', $url, [
             'form_params' => [
                 'max' => '10' , 
                 'fileTitle' => 'abc',
-                'fileText' => $request->passage,
+                'fileText' => $request->passage
                 ],
             ]);
         $responseBody = json_decode($response->getBody());
         session(['passage' => $request->passage]);
-        return redirect('/generate/result')->with(['response' => $responseBody]);
+        return redirect('/generate/result')->with(['response' => $responseBody, 'passageId' => $passageId]);
     }
 
     public function preview_passage()
@@ -55,7 +61,23 @@ class GenerateController extends Controller
 
     public function generate_result()
     {
-        TestPassages::get();
         return view('pages/Generate/generate_result');
+    }
+    public function save_generate_result(Request $request)
+    {
+        QuestionBank::insert([
+            'user_id' => Auth::id(),
+            'question' => $request->question,
+            'answer' => $request->answer,
+            'passage_id' => $request->passageId,
+            'option1' => $request->option1,
+            'option2' => $request->option2,
+            'option3' => $request->option3,
+            'option4' => $request->option4,
+            'category' => "vocabulary"
+        ]);
+
+        return redirect('/question-collection');
+        // return view('pages/Generate/generate_result');
     }
 }

@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('passages', function (Blueprint $table) {
             $table->id();
-            $table->longText("passages");
+            $table->string("title");
+            $table->longText("passage");
         });
     }
 

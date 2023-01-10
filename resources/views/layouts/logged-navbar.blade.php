@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-color-primary shadow-sm fixed-top">
             <div class="container ps-3 pe-3">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('assets/images/logo-dark.png') }}" alt="logo-image" width="70%">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
